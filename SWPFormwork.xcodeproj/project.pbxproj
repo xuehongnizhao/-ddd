@@ -1,0 +1,1018 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D88ED7D1CE9609D00E7E91C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88ED7C1CE9609D00E7E91C /* main.m */; };
+		2D88ED801CE9609D00E7E91C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88ED7F1CE9609D00E7E91C /* AppDelegate.m */; };
+		2D88ED821CE9609D00E7E91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D88ED811CE9609D00E7E91C /* Assets.xcassets */; };
+		2D88ED851CE9609D00E7E91C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D88ED831CE9609D00E7E91C /* LaunchScreen.storyboard */; };
+		2D88EDDE1CE9646500E7E91C /* SwpCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88ED9B1CE9646500E7E91C /* SwpCamera.m */; };
+		2D88EDDF1CE9646500E7E91C /* UIColor+SwpColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88ED9F1CE9646500E7E91C /* UIColor+SwpColor.m */; };
+		2D88EDE01CE9646500E7E91C /* UINavigationBar+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDA21CE9646500E7E91C /* UINavigationBar+BackgroundColor.m */; };
+		2D88EDE11CE9646500E7E91C /* UIView+SwpExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDA51CE9646500E7E91C /* UIView+SwpExtension.m */; };
+		2D88EDE21CE9646500E7E91C /* SwpGuidePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDA91CE9646500E7E91C /* SwpGuidePage.m */; };
+		2D88EDE31CE9646500E7E91C /* SwpGuideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDAC1CE9646500E7E91C /* SwpGuideModel.m */; };
+		2D88EDE41CE9646500E7E91C /* SwpGuideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDAF1CE9646500E7E91C /* SwpGuideCell.m */; };
+		2D88EDE51CE9646500E7E91C /* CSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDB31CE9646500E7E91C /* CSqlite.m */; };
+		2D88EDE61CE9646500E7E91C /* gps.db in Resources */ = {isa = PBXBuildFile; fileRef = 2D88EDB41CE9646500E7E91C /* gps.db */; };
+		2D88EDE81CE9646500E7E91C /* SwpLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDB91CE9646500E7E91C /* SwpLocation.m */; };
+		2D88EDE91CE9646500E7E91C /* SwpLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDBC1CE9646500E7E91C /* SwpLocationModel.m */; };
+		2D88EDEA1CE9646500E7E91C /* SwpAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDC01CE9646500E7E91C /* SwpAnnotation.m */; };
+		2D88EDEB1CE9646500E7E91C /* SwpMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDC31CE9646500E7E91C /* SwpMapView.m */; };
+		2D88EDEC1CE9646500E7E91C /* SwpPingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDC51CE9646500E7E91C /* SwpPingView.m */; };
+		2D88EDED1CE9646500E7E91C /* SwpSystemPinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDC71CE9646500E7E91C /* SwpSystemPinView.m */; };
+		2D88EDEE1CE9646500E7E91C /* SwpSelectPhotographCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDCB1CE9646500E7E91C /* SwpSelectPhotographCell.m */; };
+		2D88EDEF1CE9646500E7E91C /* SwpSelectPhotographView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDCD1CE9646500E7E91C /* SwpSelectPhotographView.m */; };
+		2D88EDF01CE9646500E7E91C /* SwpShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDD11CE9646500E7E91C /* SwpShareView.m */; };
+		2D88EDF11CE9646500E7E91C /* SwpShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDD41CE9646500E7E91C /* SwpShareModel.m */; };
+		2D88EDF21CE9646500E7E91C /* SwpShareTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDD71CE9646500E7E91C /* SwpShareTools.m */; };
+		2D88EDF31CE9646500E7E91C /* SwpShareShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDDA1CE9646500E7E91C /* SwpShareShowCell.m */; };
+		2D88EDF41CE9646500E7E91C /* SwpShareShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D88EDDB1CE9646500E7E91C /* SwpShareShowCell.xib */; };
+		2D88EDF51CE9646500E7E91C /* SwpShareShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EDDD1CE9646500E7E91C /* SwpShareShowView.m */; };
+		2D88EDF71CE9648B00E7E91C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D88EDF61CE9648B00E7E91C /* libsqlite3.tbd */; };
+		2D88EE2D1CE9699900E7E91C /* SwpNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE141CE9699900E7E91C /* SwpNetworkModel.m */; };
+		2D88EE301CE969C200E7E91C /* SwpFormworkTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE2F1CE969C200E7E91C /* SwpFormworkTest1ViewController.m */; };
+		2D88EE331CE969E300E7E91C /* SwpFormworkTest2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE321CE969E300E7E91C /* SwpFormworkTest2ViewController.m */; };
+		2D88EE361CE96A0300E7E91C /* SwpFormworkTest3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE351CE96A0300E7E91C /* SwpFormworkTest3ViewController.m */; };
+		2D88EE391CE96A2600E7E91C /* SwpFormworkTest4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE381CE96A2600E7E91C /* SwpFormworkTest4ViewController.m */; };
+		2D88EE451CE96A6800E7E91C /* SwpBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE3C1CE96A6800E7E91C /* SwpBaseViewController.m */; };
+		2D88EE461CE96A6800E7E91C /* SwpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE401CE96A6800E7E91C /* SwpNavigationController.m */; };
+		2D88EE471CE96A6800E7E91C /* SwpTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE431CE96A6800E7E91C /* SwpTabBarController.m */; };
+		2D88EE4A1CE96A7600E7E91C /* SwpFormworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE491CE96A7600E7E91C /* SwpFormworkViewController.m */; };
+		2D88EE4D1CE9741300E7E91C /* SwpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE4C1CE9741300E7E91C /* SwpUtils.m */; };
+		2D88EE541CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE531CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m */; };
+		3636417330415FCF0934850E /* libPods-SwpFormwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 667DB3A3D3E9F0F4468686BA /* libPods-SwpFormwork.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21F9E4976590E6F8E387DCD1 /* Pods-SwpFormwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwpFormwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwpFormwork/Pods-SwpFormwork.debug.xcconfig"; sourceTree = "<group>"; };
+		2D88ED781CE9609D00E7E91C /* SwpFormwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwpFormwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D88ED7C1CE9609D00E7E91C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D88ED7E1CE9609D00E7E91C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D88ED7F1CE9609D00E7E91C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D88ED811CE9609D00E7E91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D88ED841CE9609D00E7E91C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D88ED861CE9609D00E7E91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D88ED9A1CE9646500E7E91C /* SwpCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpCamera.h; sourceTree = "<group>"; };
+		2D88ED9B1CE9646500E7E91C /* SwpCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpCamera.m; sourceTree = "<group>"; };
+		2D88ED9E1CE9646500E7E91C /* UIColor+SwpColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SwpColor.h"; sourceTree = "<group>"; };
+		2D88ED9F1CE9646500E7E91C /* UIColor+SwpColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SwpColor.m"; sourceTree = "<group>"; };
+		2D88EDA11CE9646500E7E91C /* UINavigationBar+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+BackgroundColor.h"; sourceTree = "<group>"; };
+		2D88EDA21CE9646500E7E91C /* UINavigationBar+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+BackgroundColor.m"; sourceTree = "<group>"; };
+		2D88EDA41CE9646500E7E91C /* UIView+SwpExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SwpExtension.h"; sourceTree = "<group>"; };
+		2D88EDA51CE9646500E7E91C /* UIView+SwpExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SwpExtension.m"; sourceTree = "<group>"; };
+		2D88EDA81CE9646500E7E91C /* SwpGuidePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpGuidePage.h; sourceTree = "<group>"; };
+		2D88EDA91CE9646500E7E91C /* SwpGuidePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpGuidePage.m; sourceTree = "<group>"; };
+		2D88EDAB1CE9646500E7E91C /* SwpGuideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpGuideModel.h; sourceTree = "<group>"; };
+		2D88EDAC1CE9646500E7E91C /* SwpGuideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpGuideModel.m; sourceTree = "<group>"; };
+		2D88EDAE1CE9646500E7E91C /* SwpGuideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpGuideCell.h; sourceTree = "<group>"; };
+		2D88EDAF1CE9646500E7E91C /* SwpGuideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpGuideCell.m; sourceTree = "<group>"; };
+		2D88EDB21CE9646500E7E91C /* CSqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSqlite.h; sourceTree = "<group>"; };
+		2D88EDB31CE9646500E7E91C /* CSqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSqlite.m; sourceTree = "<group>"; };
+		2D88EDB41CE9646500E7E91C /* gps.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = gps.db; sourceTree = "<group>"; };
+		2D88EDB81CE9646500E7E91C /* SwpLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpLocation.h; sourceTree = "<group>"; };
+		2D88EDB91CE9646500E7E91C /* SwpLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpLocation.m; sourceTree = "<group>"; };
+		2D88EDBB1CE9646500E7E91C /* SwpLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpLocationModel.h; sourceTree = "<group>"; };
+		2D88EDBC1CE9646500E7E91C /* SwpLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpLocationModel.m; sourceTree = "<group>"; };
+		2D88EDBF1CE9646500E7E91C /* SwpAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpAnnotation.h; sourceTree = "<group>"; };
+		2D88EDC01CE9646500E7E91C /* SwpAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpAnnotation.m; sourceTree = "<group>"; };
+		2D88EDC21CE9646500E7E91C /* SwpMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpMapView.h; sourceTree = "<group>"; };
+		2D88EDC31CE9646500E7E91C /* SwpMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpMapView.m; sourceTree = "<group>"; };
+		2D88EDC41CE9646500E7E91C /* SwpPingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpPingView.h; sourceTree = "<group>"; };
+		2D88EDC51CE9646500E7E91C /* SwpPingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpPingView.m; sourceTree = "<group>"; };
+		2D88EDC61CE9646500E7E91C /* SwpSystemPinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpSystemPinView.h; sourceTree = "<group>"; };
+		2D88EDC71CE9646500E7E91C /* SwpSystemPinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpSystemPinView.m; sourceTree = "<group>"; };
+		2D88EDCA1CE9646500E7E91C /* SwpSelectPhotographCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpSelectPhotographCell.h; sourceTree = "<group>"; };
+		2D88EDCB1CE9646500E7E91C /* SwpSelectPhotographCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpSelectPhotographCell.m; sourceTree = "<group>"; };
+		2D88EDCC1CE9646500E7E91C /* SwpSelectPhotographView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpSelectPhotographView.h; sourceTree = "<group>"; };
+		2D88EDCD1CE9646500E7E91C /* SwpSelectPhotographView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpSelectPhotographView.m; sourceTree = "<group>"; };
+		2D88EDD01CE9646500E7E91C /* SwpShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpShareView.h; sourceTree = "<group>"; };
+		2D88EDD11CE9646500E7E91C /* SwpShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpShareView.m; sourceTree = "<group>"; };
+		2D88EDD31CE9646500E7E91C /* SwpShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpShareModel.h; sourceTree = "<group>"; };
+		2D88EDD41CE9646500E7E91C /* SwpShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpShareModel.m; sourceTree = "<group>"; };
+		2D88EDD61CE9646500E7E91C /* SwpShareTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpShareTools.h; sourceTree = "<group>"; };
+		2D88EDD71CE9646500E7E91C /* SwpShareTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpShareTools.m; sourceTree = "<group>"; };
+		2D88EDD91CE9646500E7E91C /* SwpShareShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpShareShowCell.h; sourceTree = "<group>"; };
+		2D88EDDA1CE9646500E7E91C /* SwpShareShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpShareShowCell.m; sourceTree = "<group>"; };
+		2D88EDDB1CE9646500E7E91C /* SwpShareShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwpShareShowCell.xib; sourceTree = "<group>"; };
+		2D88EDDC1CE9646500E7E91C /* SwpShareShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpShareShowView.h; sourceTree = "<group>"; };
+		2D88EDDD1CE9646500E7E91C /* SwpShareShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpShareShowView.m; sourceTree = "<group>"; };
+		2D88EDF61CE9648B00E7E91C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2D88EE131CE9699900E7E91C /* SwpNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkModel.h; sourceTree = "<group>"; };
+		2D88EE141CE9699900E7E91C /* SwpNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkModel.m; sourceTree = "<group>"; };
+		2D88EE171CE9699900E7E91C /* SwpFormworkHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkHeader.h; sourceTree = "<group>"; };
+		2D88EE181CE9699900E7E91C /* SwpFormworkPCH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkPCH.h; sourceTree = "<group>"; };
+		2D88EE2E1CE969C200E7E91C /* SwpFormworkTest1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkTest1ViewController.h; sourceTree = "<group>"; };
+		2D88EE2F1CE969C200E7E91C /* SwpFormworkTest1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpFormworkTest1ViewController.m; sourceTree = "<group>"; };
+		2D88EE311CE969E300E7E91C /* SwpFormworkTest2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkTest2ViewController.h; sourceTree = "<group>"; };
+		2D88EE321CE969E300E7E91C /* SwpFormworkTest2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpFormworkTest2ViewController.m; sourceTree = "<group>"; };
+		2D88EE341CE96A0300E7E91C /* SwpFormworkTest3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkTest3ViewController.h; sourceTree = "<group>"; };
+		2D88EE351CE96A0300E7E91C /* SwpFormworkTest3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpFormworkTest3ViewController.m; sourceTree = "<group>"; };
+		2D88EE371CE96A2600E7E91C /* SwpFormworkTest4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkTest4ViewController.h; sourceTree = "<group>"; };
+		2D88EE381CE96A2600E7E91C /* SwpFormworkTest4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpFormworkTest4ViewController.m; sourceTree = "<group>"; };
+		2D88EE3B1CE96A6800E7E91C /* SwpBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpBaseViewController.h; sourceTree = "<group>"; };
+		2D88EE3C1CE96A6800E7E91C /* SwpBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpBaseViewController.m; sourceTree = "<group>"; };
+		2D88EE3F1CE96A6800E7E91C /* SwpNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNavigationController.h; sourceTree = "<group>"; };
+		2D88EE401CE96A6800E7E91C /* SwpNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNavigationController.m; sourceTree = "<group>"; };
+		2D88EE421CE96A6800E7E91C /* SwpTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpTabBarController.h; sourceTree = "<group>"; };
+		2D88EE431CE96A6800E7E91C /* SwpTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpTabBarController.m; sourceTree = "<group>"; };
+		2D88EE481CE96A7600E7E91C /* SwpFormworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkViewController.h; sourceTree = "<group>"; };
+		2D88EE491CE96A7600E7E91C /* SwpFormworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpFormworkViewController.m; sourceTree = "<group>"; };
+		2D88EE4B1CE9741300E7E91C /* SwpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpUtils.h; sourceTree = "<group>"; };
+		2D88EE4C1CE9741300E7E91C /* SwpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpUtils.m; sourceTree = "<group>"; };
+		2D88EE521CE977B500E7E91C /* AppDelegate+MasterInterfaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MasterInterfaceData.h"; sourceTree = "<group>"; };
+		2D88EE531CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+MasterInterfaceData.m"; sourceTree = "<group>"; };
+		667DB3A3D3E9F0F4468686BA /* libPods-SwpFormwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwpFormwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1DF7AE43581268B4624DD0 /* Pods-SwpFormwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwpFormwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwpFormwork/Pods-SwpFormwork.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D88ED751CE9609D00E7E91C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D88EDF71CE9648B00E7E91C /* libsqlite3.tbd in Frameworks */,
+				3636417330415FCF0934850E /* libPods-SwpFormwork.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D88ED6F1CE9609D00E7E91C = {
+			isa = PBXGroup;
+			children = (
+				2D88ED7A1CE9609D00E7E91C /* SwpFormwork */,
+				2D88ED791CE9609D00E7E91C /* Products */,
+				FEDA774025A0A46FD13DE5C4 /* Pods */,
+				AC29BC09CCABBE0FC4D55CFB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D88ED791CE9609D00E7E91C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED781CE9609D00E7E91C /* SwpFormwork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D88ED7A1CE9609D00E7E91C /* SwpFormwork */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED8C1CE9646500E7E91C /* Class */,
+				2D88ED971CE9646500E7E91C /* Librarys */,
+				2D88ED7E1CE9609D00E7E91C /* AppDelegate.h */,
+				2D88ED7F1CE9609D00E7E91C /* AppDelegate.m */,
+				2D88ED811CE9609D00E7E91C /* Assets.xcassets */,
+				2D88ED831CE9609D00E7E91C /* LaunchScreen.storyboard */,
+				2D88ED861CE9609D00E7E91C /* Info.plist */,
+				2D88ED7B1CE9609D00E7E91C /* Supporting Files */,
+			);
+			path = SwpFormwork;
+			sourceTree = "<group>";
+		};
+		2D88ED7B1CE9609D00E7E91C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED7C1CE9609D00E7E91C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D88ED8C1CE9646500E7E91C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE061CE9699900E7E91C /* Main */,
+				2D88EE1A1CE9699900E7E91C /* SwpFormworkTest1 */,
+				2D88EE1E1CE9699900E7E91C /* SwpFormworkTest2 */,
+				2D88EE221CE9699900E7E91C /* SwpFormworkTest3 */,
+				2D88EE261CE9699900E7E91C /* SwpFormworkTest4 */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		2D88ED971CE9646500E7E91C /* Librarys */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED981CE9646500E7E91C /* SwpTools */,
+			);
+			path = Librarys;
+			sourceTree = "<group>";
+		};
+		2D88ED981CE9646500E7E91C /* SwpTools */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED991CE9646500E7E91C /* SwpCameraTool */,
+				2D88ED9C1CE9646500E7E91C /* SwpCategory */,
+				2D88EDA61CE9646500E7E91C /* SwpGuidePage */,
+				2D88EDB01CE9646500E7E91C /* SwpLocation */,
+				2D88EDC81CE9646500E7E91C /* SwpView */,
+			);
+			path = SwpTools;
+			sourceTree = "<group>";
+		};
+		2D88ED991CE9646500E7E91C /* SwpCameraTool */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED9A1CE9646500E7E91C /* SwpCamera.h */,
+				2D88ED9B1CE9646500E7E91C /* SwpCamera.m */,
+			);
+			path = SwpCameraTool;
+			sourceTree = "<group>";
+		};
+		2D88ED9C1CE9646500E7E91C /* SwpCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED9D1CE9646500E7E91C /* UIColorCategory */,
+				2D88EDA01CE9646500E7E91C /* UINavigationBarCategory */,
+				2D88EDA31CE9646500E7E91C /* UIViewCategory */,
+			);
+			path = SwpCategory;
+			sourceTree = "<group>";
+		};
+		2D88ED9D1CE9646500E7E91C /* UIColorCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2D88ED9E1CE9646500E7E91C /* UIColor+SwpColor.h */,
+				2D88ED9F1CE9646500E7E91C /* UIColor+SwpColor.m */,
+			);
+			path = UIColorCategory;
+			sourceTree = "<group>";
+		};
+		2D88EDA01CE9646500E7E91C /* UINavigationBarCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDA11CE9646500E7E91C /* UINavigationBar+BackgroundColor.h */,
+				2D88EDA21CE9646500E7E91C /* UINavigationBar+BackgroundColor.m */,
+			);
+			path = UINavigationBarCategory;
+			sourceTree = "<group>";
+		};
+		2D88EDA31CE9646500E7E91C /* UIViewCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDA41CE9646500E7E91C /* UIView+SwpExtension.h */,
+				2D88EDA51CE9646500E7E91C /* UIView+SwpExtension.m */,
+			);
+			path = UIViewCategory;
+			sourceTree = "<group>";
+		};
+		2D88EDA61CE9646500E7E91C /* SwpGuidePage */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDA71CE9646500E7E91C /* Controller */,
+				2D88EDAA1CE9646500E7E91C /* Model */,
+				2D88EDAD1CE9646500E7E91C /* View */,
+			);
+			path = SwpGuidePage;
+			sourceTree = "<group>";
+		};
+		2D88EDA71CE9646500E7E91C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDA81CE9646500E7E91C /* SwpGuidePage.h */,
+				2D88EDA91CE9646500E7E91C /* SwpGuidePage.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D88EDAA1CE9646500E7E91C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDAB1CE9646500E7E91C /* SwpGuideModel.h */,
+				2D88EDAC1CE9646500E7E91C /* SwpGuideModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D88EDAD1CE9646500E7E91C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDAE1CE9646500E7E91C /* SwpGuideCell.h */,
+				2D88EDAF1CE9646500E7E91C /* SwpGuideCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D88EDB01CE9646500E7E91C /* SwpLocation */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDB11CE9646500E7E91C /* LocationLibrary */,
+				2D88EDB51CE9646500E7E91C /* SwpLocation */,
+				2D88EDBA1CE9646500E7E91C /* SwpLocationModel */,
+				2D88EDBD1CE9646500E7E91C /* SwpMapView */,
+			);
+			path = SwpLocation;
+			sourceTree = "<group>";
+		};
+		2D88EDB11CE9646500E7E91C /* LocationLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDB21CE9646500E7E91C /* CSqlite.h */,
+				2D88EDB31CE9646500E7E91C /* CSqlite.m */,
+				2D88EDB41CE9646500E7E91C /* gps.db */,
+			);
+			path = LocationLibrary;
+			sourceTree = "<group>";
+		};
+		2D88EDB51CE9646500E7E91C /* SwpLocation */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDB81CE9646500E7E91C /* SwpLocation.h */,
+				2D88EDB91CE9646500E7E91C /* SwpLocation.m */,
+			);
+			path = SwpLocation;
+			sourceTree = "<group>";
+		};
+		2D88EDBA1CE9646500E7E91C /* SwpLocationModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDBB1CE9646500E7E91C /* SwpLocationModel.h */,
+				2D88EDBC1CE9646500E7E91C /* SwpLocationModel.m */,
+			);
+			path = SwpLocationModel;
+			sourceTree = "<group>";
+		};
+		2D88EDBD1CE9646500E7E91C /* SwpMapView */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDBE1CE9646500E7E91C /* Model */,
+				2D88EDC11CE9646500E7E91C /* View */,
+			);
+			path = SwpMapView;
+			sourceTree = "<group>";
+		};
+		2D88EDBE1CE9646500E7E91C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDBF1CE9646500E7E91C /* SwpAnnotation.h */,
+				2D88EDC01CE9646500E7E91C /* SwpAnnotation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D88EDC11CE9646500E7E91C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDC21CE9646500E7E91C /* SwpMapView.h */,
+				2D88EDC31CE9646500E7E91C /* SwpMapView.m */,
+				2D88EDC41CE9646500E7E91C /* SwpPingView.h */,
+				2D88EDC51CE9646500E7E91C /* SwpPingView.m */,
+				2D88EDC61CE9646500E7E91C /* SwpSystemPinView.h */,
+				2D88EDC71CE9646500E7E91C /* SwpSystemPinView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D88EDC81CE9646500E7E91C /* SwpView */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDC91CE9646500E7E91C /* SwpSelectPhotographView */,
+				2D88EDCE1CE9646500E7E91C /* SwpShareView */,
+			);
+			path = SwpView;
+			sourceTree = "<group>";
+		};
+		2D88EDC91CE9646500E7E91C /* SwpSelectPhotographView */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDCA1CE9646500E7E91C /* SwpSelectPhotographCell.h */,
+				2D88EDCB1CE9646500E7E91C /* SwpSelectPhotographCell.m */,
+				2D88EDCC1CE9646500E7E91C /* SwpSelectPhotographView.h */,
+				2D88EDCD1CE9646500E7E91C /* SwpSelectPhotographView.m */,
+			);
+			path = SwpSelectPhotographView;
+			sourceTree = "<group>";
+		};
+		2D88EDCE1CE9646500E7E91C /* SwpShareView */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDCF1CE9646500E7E91C /* Header */,
+				2D88EDD21CE9646500E7E91C /* Models */,
+				2D88EDD51CE9646500E7E91C /* Tools */,
+				2D88EDD81CE9646500E7E91C /* Views */,
+			);
+			path = SwpShareView;
+			sourceTree = "<group>";
+		};
+		2D88EDCF1CE9646500E7E91C /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDD01CE9646500E7E91C /* SwpShareView.h */,
+				2D88EDD11CE9646500E7E91C /* SwpShareView.m */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2D88EDD21CE9646500E7E91C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDD31CE9646500E7E91C /* SwpShareModel.h */,
+				2D88EDD41CE9646500E7E91C /* SwpShareModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D88EDD51CE9646500E7E91C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDD61CE9646500E7E91C /* SwpShareTools.h */,
+				2D88EDD71CE9646500E7E91C /* SwpShareTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2D88EDD81CE9646500E7E91C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDD91CE9646500E7E91C /* SwpShareShowCell.h */,
+				2D88EDDA1CE9646500E7E91C /* SwpShareShowCell.m */,
+				2D88EDDB1CE9646500E7E91C /* SwpShareShowCell.xib */,
+				2D88EDDC1CE9646500E7E91C /* SwpShareShowView.h */,
+				2D88EDDD1CE9646500E7E91C /* SwpShareShowView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D88EE061CE9699900E7E91C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE071CE9699900E7E91C /* Controllers */,
+				2D88EE121CE9699900E7E91C /* Models */,
+				2D88EE151CE9699900E7E91C /* SwpOrder */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2D88EE071CE9699900E7E91C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE3A1CE96A6800E7E91C /* SwpBaseViewController */,
+				2D88EE3D1CE96A6800E7E91C /* SwpFormworkViewController */,
+				2D88EE3E1CE96A6800E7E91C /* SwpNavigationController */,
+				2D88EE411CE96A6800E7E91C /* SwpTabBarViewController */,
+				2D88EE441CE96A6800E7E91C /* SwpWebViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D88EE121CE9699900E7E91C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE131CE9699900E7E91C /* SwpNetworkModel.h */,
+				2D88EE141CE9699900E7E91C /* SwpNetworkModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D88EE151CE9699900E7E91C /* SwpOrder */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE4E1CE9778900E7E91C /* SwpAppDelegateCategory */,
+				2D88EE161CE9699900E7E91C /* SwpHeader */,
+				2D88EE191CE9699900E7E91C /* SwpUtils */,
+			);
+			path = SwpOrder;
+			sourceTree = "<group>";
+		};
+		2D88EE161CE9699900E7E91C /* SwpHeader */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE171CE9699900E7E91C /* SwpFormworkHeader.h */,
+				2D88EE181CE9699900E7E91C /* SwpFormworkPCH.h */,
+			);
+			path = SwpHeader;
+			sourceTree = "<group>";
+		};
+		2D88EE191CE9699900E7E91C /* SwpUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE4B1CE9741300E7E91C /* SwpUtils.h */,
+				2D88EE4C1CE9741300E7E91C /* SwpUtils.m */,
+			);
+			path = SwpUtils;
+			sourceTree = "<group>";
+		};
+		2D88EE1A1CE9699900E7E91C /* SwpFormworkTest1 */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE1B1CE9699900E7E91C /* Controllers */,
+				2D88EE1C1CE9699900E7E91C /* Models */,
+				2D88EE1D1CE9699900E7E91C /* Views */,
+			);
+			path = SwpFormworkTest1;
+			sourceTree = "<group>";
+		};
+		2D88EE1B1CE9699900E7E91C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE2E1CE969C200E7E91C /* SwpFormworkTest1ViewController.h */,
+				2D88EE2F1CE969C200E7E91C /* SwpFormworkTest1ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D88EE1C1CE9699900E7E91C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D88EE1D1CE9699900E7E91C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D88EE1E1CE9699900E7E91C /* SwpFormworkTest2 */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE1F1CE9699900E7E91C /* Controllers */,
+				2D88EE201CE9699900E7E91C /* Models */,
+				2D88EE211CE9699900E7E91C /* Views */,
+			);
+			path = SwpFormworkTest2;
+			sourceTree = "<group>";
+		};
+		2D88EE1F1CE9699900E7E91C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE311CE969E300E7E91C /* SwpFormworkTest2ViewController.h */,
+				2D88EE321CE969E300E7E91C /* SwpFormworkTest2ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D88EE201CE9699900E7E91C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D88EE211CE9699900E7E91C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D88EE221CE9699900E7E91C /* SwpFormworkTest3 */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE231CE9699900E7E91C /* Controllers */,
+				2D88EE241CE9699900E7E91C /* Models */,
+				2D88EE251CE9699900E7E91C /* Views */,
+			);
+			path = SwpFormworkTest3;
+			sourceTree = "<group>";
+		};
+		2D88EE231CE9699900E7E91C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE341CE96A0300E7E91C /* SwpFormworkTest3ViewController.h */,
+				2D88EE351CE96A0300E7E91C /* SwpFormworkTest3ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D88EE241CE9699900E7E91C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D88EE251CE9699900E7E91C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D88EE261CE9699900E7E91C /* SwpFormworkTest4 */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE271CE9699900E7E91C /* Controllers */,
+				2D88EE281CE9699900E7E91C /* Models */,
+				2D88EE291CE9699900E7E91C /* Views */,
+			);
+			path = SwpFormworkTest4;
+			sourceTree = "<group>";
+		};
+		2D88EE271CE9699900E7E91C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE371CE96A2600E7E91C /* SwpFormworkTest4ViewController.h */,
+				2D88EE381CE96A2600E7E91C /* SwpFormworkTest4ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D88EE281CE9699900E7E91C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D88EE291CE9699900E7E91C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D88EE3A1CE96A6800E7E91C /* SwpBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE3B1CE96A6800E7E91C /* SwpBaseViewController.h */,
+				2D88EE3C1CE96A6800E7E91C /* SwpBaseViewController.m */,
+			);
+			path = SwpBaseViewController;
+			sourceTree = "<group>";
+		};
+		2D88EE3D1CE96A6800E7E91C /* SwpFormworkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE481CE96A7600E7E91C /* SwpFormworkViewController.h */,
+				2D88EE491CE96A7600E7E91C /* SwpFormworkViewController.m */,
+			);
+			path = SwpFormworkViewController;
+			sourceTree = "<group>";
+		};
+		2D88EE3E1CE96A6800E7E91C /* SwpNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE3F1CE96A6800E7E91C /* SwpNavigationController.h */,
+				2D88EE401CE96A6800E7E91C /* SwpNavigationController.m */,
+			);
+			path = SwpNavigationController;
+			sourceTree = "<group>";
+		};
+		2D88EE411CE96A6800E7E91C /* SwpTabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE421CE96A6800E7E91C /* SwpTabBarController.h */,
+				2D88EE431CE96A6800E7E91C /* SwpTabBarController.m */,
+			);
+			path = SwpTabBarViewController;
+			sourceTree = "<group>";
+		};
+		2D88EE441CE96A6800E7E91C /* SwpWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwpWebViewController;
+			sourceTree = "<group>";
+		};
+		2D88EE4E1CE9778900E7E91C /* SwpAppDelegateCategory */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE521CE977B500E7E91C /* AppDelegate+MasterInterfaceData.h */,
+				2D88EE531CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m */,
+			);
+			path = SwpAppDelegateCategory;
+			sourceTree = "<group>";
+		};
+		AC29BC09CCABBE0FC4D55CFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EDF61CE9648B00E7E91C /* libsqlite3.tbd */,
+				667DB3A3D3E9F0F4468686BA /* libPods-SwpFormwork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEDA774025A0A46FD13DE5C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21F9E4976590E6F8E387DCD1 /* Pods-SwpFormwork.debug.xcconfig */,
+				FA1DF7AE43581268B4624DD0 /* Pods-SwpFormwork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D88ED771CE9609D00E7E91C /* SwpFormwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D88ED891CE9609D00E7E91C /* Build configuration list for PBXNativeTarget "SwpFormwork" */;
+			buildPhases = (
+				672BD3036EBC420D6295D819 /* 📦 Check Pods Manifest.lock */,
+				2D88ED741CE9609D00E7E91C /* Sources */,
+				2D88ED751CE9609D00E7E91C /* Frameworks */,
+				2D88ED761CE9609D00E7E91C /* Resources */,
+				339DCBE4CBFC867050F9E1D4 /* 📦 Embed Pods Frameworks */,
+				FE7399AF4C1871EBC8714E8A /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwpFormwork;
+			productName = SwpFormwork;
+			productReference = 2D88ED781CE9609D00E7E91C /* SwpFormwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D88ED701CE9609D00E7E91C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = swp_song;
+				TargetAttributes = {
+					2D88ED771CE9609D00E7E91C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L4TEBNF8E5;
+					};
+				};
+			};
+			buildConfigurationList = 2D88ED731CE9609D00E7E91C /* Build configuration list for PBXProject "SwpFormwork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D88ED6F1CE9609D00E7E91C;
+			productRefGroup = 2D88ED791CE9609D00E7E91C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D88ED771CE9609D00E7E91C /* SwpFormwork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D88ED761CE9609D00E7E91C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D88ED821CE9609D00E7E91C /* Assets.xcassets in Resources */,
+				2D88ED851CE9609D00E7E91C /* LaunchScreen.storyboard in Resources */,
+				2D88EDE61CE9646500E7E91C /* gps.db in Resources */,
+				2D88EDF41CE9646500E7E91C /* SwpShareShowCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		339DCBE4CBFC867050F9E1D4 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwpFormwork/Pods-SwpFormwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		672BD3036EBC420D6295D819 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE7399AF4C1871EBC8714E8A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwpFormwork/Pods-SwpFormwork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D88ED741CE9609D00E7E91C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D88EE541CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m in Sources */,
+				2D88EDEF1CE9646500E7E91C /* SwpSelectPhotographView.m in Sources */,
+				2D88EE2D1CE9699900E7E91C /* SwpNetworkModel.m in Sources */,
+				2D88EE461CE96A6800E7E91C /* SwpNavigationController.m in Sources */,
+				2D88EE451CE96A6800E7E91C /* SwpBaseViewController.m in Sources */,
+				2D88ED801CE9609D00E7E91C /* AppDelegate.m in Sources */,
+				2D88EDE11CE9646500E7E91C /* UIView+SwpExtension.m in Sources */,
+				2D88EDED1CE9646500E7E91C /* SwpSystemPinView.m in Sources */,
+				2D88ED7D1CE9609D00E7E91C /* main.m in Sources */,
+				2D88EDEE1CE9646500E7E91C /* SwpSelectPhotographCell.m in Sources */,
+				2D88EDEB1CE9646500E7E91C /* SwpMapView.m in Sources */,
+				2D88EDE31CE9646500E7E91C /* SwpGuideModel.m in Sources */,
+				2D88EDDF1CE9646500E7E91C /* UIColor+SwpColor.m in Sources */,
+				2D88EE301CE969C200E7E91C /* SwpFormworkTest1ViewController.m in Sources */,
+				2D88EDE51CE9646500E7E91C /* CSqlite.m in Sources */,
+				2D88EE361CE96A0300E7E91C /* SwpFormworkTest3ViewController.m in Sources */,
+				2D88EDE81CE9646500E7E91C /* SwpLocation.m in Sources */,
+				2D88EDE01CE9646500E7E91C /* UINavigationBar+BackgroundColor.m in Sources */,
+				2D88EDEA1CE9646500E7E91C /* SwpAnnotation.m in Sources */,
+				2D88EDF51CE9646500E7E91C /* SwpShareShowView.m in Sources */,
+				2D88EDEC1CE9646500E7E91C /* SwpPingView.m in Sources */,
+				2D88EDF11CE9646500E7E91C /* SwpShareModel.m in Sources */,
+				2D88EE331CE969E300E7E91C /* SwpFormworkTest2ViewController.m in Sources */,
+				2D88EDF21CE9646500E7E91C /* SwpShareTools.m in Sources */,
+				2D88EE4D1CE9741300E7E91C /* SwpUtils.m in Sources */,
+				2D88EDE91CE9646500E7E91C /* SwpLocationModel.m in Sources */,
+				2D88EDDE1CE9646500E7E91C /* SwpCamera.m in Sources */,
+				2D88EE471CE96A6800E7E91C /* SwpTabBarController.m in Sources */,
+				2D88EDF01CE9646500E7E91C /* SwpShareView.m in Sources */,
+				2D88EDF31CE9646500E7E91C /* SwpShareShowCell.m in Sources */,
+				2D88EDE21CE9646500E7E91C /* SwpGuidePage.m in Sources */,
+				2D88EE391CE96A2600E7E91C /* SwpFormworkTest4ViewController.m in Sources */,
+				2D88EDE41CE9646500E7E91C /* SwpGuideCell.m in Sources */,
+				2D88EE4A1CE96A7600E7E91C /* SwpFormworkViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2D88ED831CE9609D00E7E91C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D88ED841CE9609D00E7E91C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D88ED871CE9609D00E7E91C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2D88ED881CE9609D00E7E91C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D88ED8A1CE9609D00E7E91C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21F9E4976590E6F8E387DCD1 /* Pods-SwpFormwork.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SwpFormwork/Class/Main/SwpOrder/SwpHeader/SwpFormworkPCH.h";
+				INFOPLIST_FILE = SwpFormwork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.SwpFormwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		2D88ED8B1CE9609D00E7E91C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA1DF7AE43581268B4624DD0 /* Pods-SwpFormwork.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SwpFormwork/Class/Main/SwpOrder/SwpHeader/SwpFormworkPCH.h";
+				INFOPLIST_FILE = SwpFormwork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.SwpFormwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D88ED731CE9609D00E7E91C /* Build configuration list for PBXProject "SwpFormwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D88ED871CE9609D00E7E91C /* Debug */,
+				2D88ED881CE9609D00E7E91C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D88ED891CE9609D00E7E91C /* Build configuration list for PBXNativeTarget "SwpFormwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D88ED8A1CE9609D00E7E91C /* Debug */,
+				2D88ED8B1CE9609D00E7E91C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D88ED701CE9609D00E7E91C /* Project object */;
+}

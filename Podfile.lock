@@ -1,0 +1,76 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Base64nl (1.2)
+  - DOPDropDownMenu-Enhanced (1.0.0)
+  - FDFullscreenPopGesture_Bell (2.0)
+  - IQKeyboardManager (3.3.7)
+  - Masonry (1.0.0)
+  - MJExtension (3.0.10)
+  - MJRefresh (3.1.0)
+  - RDVTabBarController (1.1.9)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - SVProgressHUD (2.0.3)
+  - SwpBanner (1.0.2):
+    - SDWebImage
+  - SwpRefreshHeader (1.0.1):
+    - MJRefresh
+  - SwpRequest (1.0.1):
+    - AFNetworking
+    - Base64nl
+  - SwpTextView (1.0.1)
+  - SwpTools (1.0.4)
+  - WebViewJavascriptBridge (5.0.5)
+
+DEPENDENCIES:
+  - DOPDropDownMenu-Enhanced
+  - FDFullscreenPopGesture_Bell
+  - IQKeyboardManager
+  - Masonry
+  - MJExtension
+  - RDVTabBarController
+  - SVProgressHUD
+  - SwpBanner
+  - SwpRefreshHeader
+  - SwpRequest
+  - SwpTextView
+  - SwpTools
+  - WebViewJavascriptBridge
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Base64nl: a497bdcd1c01ea793d36b399016195a8713c0e95
+  DOPDropDownMenu-Enhanced: 9ec473b16351b5b0b2d6ef87e7f666fe5ff54ad5
+  FDFullscreenPopGesture_Bell: 7512810077dd7f167cfb6a14e060cdfd71ca5729
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwpBanner: db54be7a10f27e7888021501dec3cb822e6ed0bd
+  SwpRefreshHeader: fbb50320d4420c28e6d1d437c6c45b52b6f0bb9a
+  SwpRequest: fdae80baa6b67b363fc093208861926415916eff
+  SwpTextView: 712feba60fc8371634d7e37cb3079c90ba9462c9
+  SwpTools: 61db1bed2d90e997b29f136ec1062fe95a7beba6
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
+
+PODFILE CHECKSUM: 95a4ef89b78785a16f94f1dba9a6af9c3d6b9702
+
+COCOAPODS: 1.0.0
