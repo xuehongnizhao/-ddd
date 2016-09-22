@@ -327,7 +327,6 @@ static NSString * const tabBarImageStateSelected = @"sel";
                              NSStringFromClass([SwpFormworkTest1ViewController class]),
                              NSStringFromClass([SwpFormworkTest2ViewController class]),
                              NSStringFromClass([SwpFormworkTest3ViewController class]),
-                             NSStringFromClass([SwpFormworkTest4ViewController class]),
                              ];
     }
     return _controllerNames;
@@ -347,7 +346,7 @@ static NSString * const tabBarImageStateSelected = @"sel";
     if (!_tabBarItemNames) {
         
         _tabBarItemNames = [NSArray copy];
-        _tabBarItemNames = @[@"SwpTest1", @"SwpTest2", @"SwpTest3", @"SwpTest4"];
+        _tabBarItemNames = @[@"SwpTest1", @"SwpTest2", @"SwpTest3"];
     }
     return _tabBarItemNames;
 }
@@ -357,7 +356,7 @@ static NSString * const tabBarImageStateSelected = @"sel";
     if (!_tabBarItemImages) {
         
         _tabBarItemImages = [NSArray copy];
-        _tabBarItemImages = @[@"home", @"shop", @"order", @"mine",];
+        _tabBarItemImages = @[@"通讯录", @"通知", @"我的", ];
     }
     return _tabBarItemImages;
 }

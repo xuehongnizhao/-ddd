@@ -735,7 +735,7 @@
 				TargetAttributes = {
 					2D88ED771CE9609D00E7E91C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = L4TEBNF8E5;
+						DevelopmentTeam = LPE25S623J;
 					};
 				};
 			};
@@ -964,11 +964,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LPE25S623J;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwpFormwork/Class/Main/SwpOrder/SwpHeader/SwpFormworkPCH.h";
 				INFOPLIST_FILE = SwpFormwork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.SwpFormwork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.AddressList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -981,11 +982,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LPE25S623J;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwpFormwork/Class/Main/SwpOrder/SwpHeader/SwpFormworkPCH.h";
 				INFOPLIST_FILE = SwpFormwork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.SwpFormwork;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.AddressList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
