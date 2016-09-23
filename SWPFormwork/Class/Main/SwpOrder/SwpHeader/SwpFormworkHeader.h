@@ -12,10 +12,10 @@
     #import "SwpNetworkModel.h"
     #import <SwpTools/SwpTools.h>
     #import <SwpTools/SwpWeakifyHeader.h>
-    #import <Masonry/Masonry.h>
+    #import "PureLayout.h"
     #import <MJRefresh/MJRefresh.h>
     #import <SDWebImage/UIImageView+WebCache.h>
     #import <SVProgressHUD/SVProgressHUD.h>
     #import <RDVTabBarController/RDVTabBarController.h>
-
+    #import "UIColor+SwpColor.h"                          
 #endif /* SwpFormworkHeader_h */

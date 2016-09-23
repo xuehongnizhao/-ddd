@@ -10,6 +10,7 @@
 
 #import "SwpTabBarController.h"
 
+#import "LoginViewController.h"
 #import "AppDelegate+MasterInterfaceData.h"
 
 @interface AppDelegate ()
@@ -27,7 +28,13 @@
     self.window                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor    = [UIColor whiteColor];
-    self.window.rootViewController = [SwpTabBarController shareInstance];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:isLogin]) {
+        self.window.rootViewController = [[LoginViewController alloc ]init];
+    }else{
+         self.window.rootViewController =  [SwpTabBarController shareInstance];
+    }
+  
+  
     [self.window makeKeyAndVisible];
     return YES;
 }

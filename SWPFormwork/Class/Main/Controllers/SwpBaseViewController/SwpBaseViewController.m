@@ -11,7 +11,6 @@
 /*! ---------------------- Tools      ---------------------- !*/
 #import <UINavigationController+FDFullscreenPopGesture.h>   // 手势
 #import "UINavigationBar+BackgroundColor.h"                 // UINavigationBar Color
-#import "UIColor+SwpColor.h"                                // Color 分类
 #import <SwpTools/SwpTools.h>                               // 工具类
 /*! ---------------------- Tools      ---------------------- !*/
 
@@ -114,7 +113,7 @@
     self.view.backgroundColor                                           = [UIColor whiteColor];
     self.navigationItem.backBarButtonItem                               = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
     self.navigationBarTitleSize                                         = 15;
-    [self.navigationController.navigationBar swp_SetBackgroundColor:[UIColor swpColorFromHEX:0xff6501]];
+    [self.navigationController.navigationBar swp_SetBackgroundColor:[UIColor swpColorFromHEX:0xe31f0e]];
     self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = YES;
     self.fd_interactivePopMaxAllowedInitialDistanceToLeftEdge           = [SwpTools swpToolScreenWidth] / 5.0;
 }

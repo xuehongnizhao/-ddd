@@ -10,5 +10,8 @@
 #define SwpFormworkPCH_h
 
     #import <SwpTools/SwpLog.h>
-
+    #import "macro.h"
+    #import "defaultName.h"
+    #import "SwpFormworkHeader.h"
+    #import "SwpRequest.h"
 #endif /* SwpFormworkPCH_h */

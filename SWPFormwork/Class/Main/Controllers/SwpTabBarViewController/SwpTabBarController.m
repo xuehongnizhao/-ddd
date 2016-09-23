@@ -15,10 +15,10 @@
 
 /*! ---------------------- Controller ---------------------- !*/
 #import "SwpNavigationController.h"            // 导航控制器
-#import "SwpFormworkTest1ViewController.h"     // 测试 控制器 1
-#import "SwpFormworkTest2ViewController.h"     // 测试 控制器 2
-#import "SwpFormworkTest3ViewController.h"     // 测试 控制器 3
-#import "SwpFormworkTest4ViewController.h"     // 测试 控制器 4
+#import "AddressListViewController.h"     // 通讯录
+#import "MessageViewController.h"     // 消息
+#import "MineViewController.h"     // 我的
+
 /*! ---------------------- Controller ---------------------- !*/
 
 
@@ -224,7 +224,7 @@ static NSString * const tabBarImageStateSelected = @"sel";
     // 未选中
     item.unselectedTitleAttributes  = [self settingTabBarTitleAttributes:10 titleColor:[UIColor swpColorFromHEX:0x747474]];
     // 选中
-    item.selectedTitleAttributes    = [self settingTabBarTitleAttributes:10 titleColor:[UIColor swpColorFromHEX:0xff6501]];
+    item.selectedTitleAttributes    = [self settingTabBarTitleAttributes:10 titleColor:[UIColor swpColorFromHEX:0xe31f0e]];
     
     // 设置 图片
     UIImage *selectedimage          = [self settingTabBarImage:imageName imageStatus:tabBarImageStateSelected];
@@ -324,9 +324,9 @@ static NSString * const tabBarImageStateSelected = @"sel";
         
         _controllerNames = [NSArray array];
         _controllerNames = @[
-                             NSStringFromClass([SwpFormworkTest1ViewController class]),
-                             NSStringFromClass([SwpFormworkTest2ViewController class]),
-                             NSStringFromClass([SwpFormworkTest3ViewController class]),
+                             NSStringFromClass([AddressListViewController class]),
+                             NSStringFromClass([MessageViewController class]),
+                             NSStringFromClass([MineViewController class]),
                              ];
     }
     return _controllerNames;
@@ -346,7 +346,7 @@ static NSString * const tabBarImageStateSelected = @"sel";
     if (!_tabBarItemNames) {
         
         _tabBarItemNames = [NSArray copy];
-        _tabBarItemNames = @[@"SwpTest1", @"SwpTest2", @"SwpTest3"];
+        _tabBarItemNames = @[@"通讯录", @"通知", @"我的"];
     }
     return _tabBarItemNames;
 }
@@ -356,7 +356,7 @@ static NSString * const tabBarImageStateSelected = @"sel";
     if (!_tabBarItemImages) {
         
         _tabBarItemImages = [NSArray copy];
-        _tabBarItemImages = @[@"通讯录", @"通知", @"我的", ];
+        _tabBarItemImages = @[@"addressList", @"message", @"mine", ];
     }
     return _tabBarItemImages;
 }
