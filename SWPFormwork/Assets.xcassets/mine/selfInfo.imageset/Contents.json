@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ximima-1.png",
+      "filename" : "selfInfo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ximima.png",
+      "filename" : "selfInfo-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ximima1.png",
+      "filename" : "selfInfo80.png",
       "scale" : "3x"
     }
   ],

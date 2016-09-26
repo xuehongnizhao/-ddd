@@ -93,7 +93,7 @@
 }
 
 - (void)dissmissAction{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 - (UITextField *)phoneNumber{
     if (!_phoneNumber) {
@@ -154,6 +154,7 @@
         _zqNewPassword.layer.borderWidth=1;
         _zqNewPassword.layer.borderColor=[UIColor colorWithWhite:.8 alpha:1].CGColor;
         _zqNewPassword.placeholder=@"请输入新密码";
+        _zqNewPassword.secureTextEntry=YES;
         _zqNewPassword.textAlignment=NSTextAlignmentCenter;
         
     }
@@ -172,6 +173,10 @@
 }
 
 - (void)completeAction{
+    if (self.zqNewPassword.text.length==0||self.authCode.text.length==0) {
+        [SVProgressHUD showErrorWithStatus:@"验证码或者新密码不能为空"];
+        return;
+    }
     NSDictionary *dic=@{
                         @"peopleId":GetUserDefault(peopleId),
                         @"userName":self.phoneNumber.text,
@@ -185,6 +190,7 @@
             [SVProgressHUD showErrorWithStatus:[resultObject objectForKey:@"message"]];
         }else{
             [SVProgressHUD showSuccessWithStatus:[resultObject objectForKey:@"message"]];
+            [self dissmissAction];
         }
     } swpResultError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
         

@@ -24,7 +24,7 @@
 #define isLogin     @"islogined"              /*!< 判断用户登录状态: yes-已登录，no-未登录 */\
 
 #define peopleId      @"peopleId"           //唯一标识
-
+#define myInfoDic      @"myInfo"               //个人信息
 #define lastName    @"lastName"             //上次登录的账号
 #define BalanceWidth SCREEN_WIDTH/320.0
 #define BalanceHeight SCREEN_HEIGHT/621.0

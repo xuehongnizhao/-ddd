@@ -21,7 +21,7 @@
 }
 
 - (void)setUI{
-    [self setNavigationBarTitle:@"通知" textColor:[UIColor whiteColor] titleFontSize:nil];
+    [self setNavigationBarTitle:@"通知" textColor:[UIColor whiteColor] titleFontSize:@20];
     
     
 }

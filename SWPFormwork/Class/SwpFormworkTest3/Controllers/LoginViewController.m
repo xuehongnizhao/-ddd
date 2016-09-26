@@ -130,8 +130,10 @@
                           };
     [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/userLogin" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject){
         if ([[resultObject objectForKey:@"code"]isEqualToString:@"0000" ]) {
-            SetUserDefault([resultObject objectForKey:peopleId], peopleId);
-//            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:isLogin];
+            
+            SetUserDefault([resultObject objectForKey:@"message"], peopleId);
+            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:isLogin];
+            [[NSUserDefaults standardUserDefaults] synchronize];
             [UIApplication sharedApplication].keyWindow.rootViewController=[SwpTabBarController shareInstance];
         }else{
             [SVProgressHUD showErrorWithStatus:[resultObject objectForKey:@"message"]];
@@ -156,6 +158,6 @@
 
 - (void)lostPasswordAction{
     ChangePasswordViewController *firvc=[[ChangePasswordViewController alloc]init];
-    [self presentViewController:firvc animated:YES completion:nil];
+    [self presentViewController:firvc animated:NO completion:nil];
 }
 @end
