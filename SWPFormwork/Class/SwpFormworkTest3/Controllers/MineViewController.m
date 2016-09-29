@@ -26,13 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getDataFromNet];
-    [self setUI];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
+    [self getDataFromNet];
+    [self setUI];
 }
 - (void)getDataFromNet{
     
@@ -59,18 +60,20 @@
     [backGroundView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
     [backGroundView autoPinEdgeToSuperviewEdge:ALEdgeRight];
     [backGroundView autoSetDimension:ALDimensionHeight toSize:200*BalanceHeight];
+    
     [backGroundView addSubview:self.headImage];
     NSDictionary *dic=GetUserDefault(myInfoDic);
     NSString *imageUrl=[dic objectForKey:@"photo"];
     if (imageUrl.length>0) {
         NSString *urlString=[NSString stringWithFormat:@"http://139.129.218.191:8080/web/%@",imageUrl];
         NSURL *url=[NSURL URLWithString:urlString];
-        [_headImage sd_setImageWithURL:url];
-        
+        NSData *data=[NSData dataWithContentsOfURL:url];
+        UIImage *imageddd=[UIImage imageWithData:data];
+        _headImage.image=imageddd;
     }
     [_headImage autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [_headImage autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [_headImage autoSetDimensionsToSize:CGSizeMake(80, 80)];
+    [_headImage autoSetDimensionsToSize:CGSizeMake(110*BalanceWidth, 110*BalanceWidth)];
     
     [backGroundView addSubview:self.nameLabel];
     _nameLabel.text=self.myInfo.peopleName;
@@ -113,8 +116,10 @@
 - (UIImageView *)headImage{
     if (!_headImage) {
         _headImage=[[UIImageView alloc]initForAutoLayout];
+        _headImage.layer.cornerRadius=55*BalanceWidth;
+        _headImage.clipsToBounds=YES;
         _headImage.image=[UIImage imageNamed:@"placeholderImage"];
-        
+  
     }
     return _headImage;
 }
@@ -200,7 +205,7 @@
 
 
 - (void)verionInfoAction{
-    [SVProgressHUD showWithStatus:@"当前为最新版本"];
+    [SVProgressHUD showSuccessWithStatus:@"宏鼎科技提供技术支持\n当前版本为1.0 无需更新"];
 }
 
 - (UIButton *)quitLogin{

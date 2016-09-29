@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0420427F1D9B9373003528EA /* BossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0420427E1D9B9373003528EA /* BossViewController.m */; };
+		042042851D9BB304003528EA /* MessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 042042841D9BB304003528EA /* MessageInfo.m */; };
+		042042881D9C9E04003528EA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042042871D9C9E04003528EA /* WebViewController.m */; };
+		0420428B1D9CB631003528EA /* DepartMentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0420428A1D9CB631003528EA /* DepartMentViewController.m */; };
 		0424C6A81D98EBE700940283 /* PeopleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C6A71D98EBE700940283 /* PeopleInfo.m */; };
 		0424C6AB1D9925BF00940283 /* SelfInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C6AA1D9925BF00940283 /* SelfInfoViewController.m */; };
+		0424C7541D9A145800940283 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C7531D9A145800940283 /* VPImageCropperViewController.m */; };
+		0424C75D1D9A436D00940283 /* DepartmentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C75C1D9A436D00940283 /* DepartmentInfo.m */; };
+		0424C7601D9A443000940283 /* TeamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C75F1D9A443000940283 /* TeamInfo.m */; };
 		046877C31D94AFE800CC0DB7 /* AddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877C21D94AFE800CC0DB7 /* AddressListViewController.m */; };
 		046877C61D94B00700CC0DB7 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877C51D94B00700CC0DB7 /* MessageViewController.m */; };
 		046877C91D94B00F00CC0DB7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877C81D94B00F00CC0DB7 /* MineViewController.m */; };
@@ -75,10 +82,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0420427D1D9B9373003528EA /* BossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BossViewController.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/BossViewController.h; sourceTree = SOURCE_ROOT; };
+		0420427E1D9B9373003528EA /* BossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BossViewController.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/BossViewController.m; sourceTree = SOURCE_ROOT; };
+		042042831D9BB304003528EA /* MessageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageInfo.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/MessageInfo.h; sourceTree = SOURCE_ROOT; };
+		042042841D9BB304003528EA /* MessageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageInfo.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/MessageInfo.m; sourceTree = SOURCE_ROOT; };
+		042042861D9C9E04003528EA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = SWPFormwork/Class/SwpFormworkTest2/Controllers/WebViewController.h; sourceTree = SOURCE_ROOT; };
+		042042871D9C9E04003528EA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = SWPFormwork/Class/SwpFormworkTest2/Controllers/WebViewController.m; sourceTree = SOURCE_ROOT; };
+		042042891D9CB631003528EA /* DepartMentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartMentViewController.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/DepartMentViewController.h; sourceTree = SOURCE_ROOT; };
+		0420428A1D9CB631003528EA /* DepartMentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DepartMentViewController.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/DepartMentViewController.m; sourceTree = SOURCE_ROOT; };
 		0424C6A61D98EBE700940283 /* PeopleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInfo.h; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/PeopleInfo.h; sourceTree = SOURCE_ROOT; };
 		0424C6A71D98EBE700940283 /* PeopleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInfo.m; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/PeopleInfo.m; sourceTree = SOURCE_ROOT; };
 		0424C6A91D9925BF00940283 /* SelfInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelfInfoViewController.h; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/SelfInfoViewController.h; sourceTree = SOURCE_ROOT; };
 		0424C6AA1D9925BF00940283 /* SelfInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelfInfoViewController.m; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/SelfInfoViewController.m; sourceTree = SOURCE_ROOT; };
+		0424C7521D9A145800940283 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		0424C7531D9A145800940283 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		0424C75B1D9A436D00940283 /* DepartmentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartmentInfo.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/DepartmentInfo.h; sourceTree = SOURCE_ROOT; };
+		0424C75C1D9A436D00940283 /* DepartmentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DepartmentInfo.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/DepartmentInfo.m; sourceTree = SOURCE_ROOT; };
+		0424C75E1D9A443000940283 /* TeamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamInfo.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/TeamInfo.h; sourceTree = SOURCE_ROOT; };
+		0424C75F1D9A443000940283 /* TeamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamInfo.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/TeamInfo.m; sourceTree = SOURCE_ROOT; };
 		046877C11D94AFE800CC0DB7 /* AddressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressListViewController.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/AddressListViewController.h; sourceTree = SOURCE_ROOT; };
 		046877C21D94AFE800CC0DB7 /* AddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressListViewController.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/AddressListViewController.m; sourceTree = SOURCE_ROOT; };
 		046877C41D94B00700CC0DB7 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageViewController.h; path = SWPFormwork/Class/SwpFormworkTest2/Controllers/MessageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -221,6 +242,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0424C7511D9A145800940283 /* VPImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				0424C7521D9A145800940283 /* VPImageCropperViewController.h */,
+				0424C7531D9A145800940283 /* VPImageCropperViewController.m */,
+			);
+			path = VPImageCropper;
+			sourceTree = "<group>";
+		};
 		046877CF1D94CB6400CC0DB7 /* PureLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +398,7 @@
 		2D88ED971CE9646500E7E91C /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
+				0424C7511D9A145800940283 /* VPImageCropper */,
 				046877DC1D95050700CC0DB7 /* XMNPhotoPickerFramework */,
 				2D88ED981CE9646500E7E91C /* SwpTools */,
 			);
@@ -677,6 +708,10 @@
 			children = (
 				046877C11D94AFE800CC0DB7 /* AddressListViewController.h */,
 				046877C21D94AFE800CC0DB7 /* AddressListViewController.m */,
+				042042891D9CB631003528EA /* DepartMentViewController.h */,
+				0420428A1D9CB631003528EA /* DepartMentViewController.m */,
+				0420427D1D9B9373003528EA /* BossViewController.h */,
+				0420427E1D9B9373003528EA /* BossViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -686,6 +721,10 @@
 			children = (
 				0424C6A61D98EBE700940283 /* PeopleInfo.h */,
 				0424C6A71D98EBE700940283 /* PeopleInfo.m */,
+				0424C75B1D9A436D00940283 /* DepartmentInfo.h */,
+				0424C75C1D9A436D00940283 /* DepartmentInfo.m */,
+				0424C75E1D9A443000940283 /* TeamInfo.h */,
+				0424C75F1D9A443000940283 /* TeamInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -713,6 +752,8 @@
 			children = (
 				046877C41D94B00700CC0DB7 /* MessageViewController.h */,
 				046877C51D94B00700CC0DB7 /* MessageViewController.m */,
+				042042861D9C9E04003528EA /* WebViewController.h */,
+				042042871D9C9E04003528EA /* WebViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -720,6 +761,8 @@
 		2D88EE201CE9699900E7E91C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				042042831D9BB304003528EA /* MessageInfo.h */,
+				042042841D9BB304003528EA /* MessageInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -977,7 +1020,10 @@
 				2D88EE461CE96A6800E7E91C /* SwpNavigationController.m in Sources */,
 				2D88EE451CE96A6800E7E91C /* SwpBaseViewController.m in Sources */,
 				046878151D95050700CC0DB7 /* XMNPhotoPicker.m in Sources */,
+				042042851D9BB304003528EA /* MessageInfo.m in Sources */,
+				0424C7601D9A443000940283 /* TeamInfo.m in Sources */,
 				2D88ED801CE9609D00E7E91C /* AppDelegate.m in Sources */,
+				042042881D9C9E04003528EA /* WebViewController.m in Sources */,
 				2D88EDE11CE9646500E7E91C /* UIView+SwpExtension.m in Sources */,
 				046878071D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.m in Sources */,
 				2D88EDED1CE9646500E7E91C /* SwpSystemPinView.m in Sources */,
@@ -996,18 +1042,22 @@
 				046878131D95050700CC0DB7 /* XMNBottomBar.m in Sources */,
 				2D88EDE01CE9646500E7E91C /* UINavigationBar+BackgroundColor.m in Sources */,
 				2D88EDEA1CE9646500E7E91C /* SwpAnnotation.m in Sources */,
+				0424C75D1D9A436D00940283 /* DepartmentInfo.m in Sources */,
 				2D88EDF51CE9646500E7E91C /* SwpShareShowView.m in Sources */,
 				046878181D95050700CC0DB7 /* XMNPhotoStickLayout.m in Sources */,
 				2D88EDEC1CE9646500E7E91C /* SwpPingView.m in Sources */,
 				2D88EDF11CE9646500E7E91C /* SwpShareModel.m in Sources */,
+				0420427F1D9B9373003528EA /* BossViewController.m in Sources */,
 				2D88EDF21CE9646500E7E91C /* SwpShareTools.m in Sources */,
 				046877C61D94B00700CC0DB7 /* MessageViewController.m in Sources */,
 				046878091D95050700CC0DB7 /* XMNPhotoPickerController.m in Sources */,
 				046878061D95050700CC0DB7 /* UIView+Animations.m in Sources */,
+				0424C7541D9A145800940283 /* VPImageCropperViewController.m in Sources */,
 				2D88EE4D1CE9741300E7E91C /* SwpUtils.m in Sources */,
 				0424C6AB1D9925BF00940283 /* SelfInfoViewController.m in Sources */,
 				046877CC1D94C5A100CC0DB7 /* LoginViewController.m in Sources */,
 				0468781C1D9518EB00CC0DB7 /* ChangePasswordViewController.m in Sources */,
+				0420428B1D9CB631003528EA /* DepartMentViewController.m in Sources */,
 				2D88EDE91CE9646500E7E91C /* SwpLocationModel.m in Sources */,
 				046878081D95050700CC0DB7 /* XMNPhotoCollectionController.m in Sources */,
 				0468780F1D95050700CC0DB7 /* XMNAlbumCell.m in Sources */,
@@ -1141,6 +1191,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.AddressList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -1159,6 +1210,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.youdro.AddressList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

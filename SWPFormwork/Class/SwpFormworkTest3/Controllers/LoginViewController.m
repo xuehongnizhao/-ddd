@@ -45,7 +45,7 @@
     [self.view addSubview:logo];
     [logo autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:naviView withOffset:20];
     [logo autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [logo autoSetDimensionsToSize:CGSizeMake(80*BalanceWidth, 80*BalanceHeight)];
+    [logo autoSetDimensionsToSize:CGSizeMake(120*BalanceWidth, 120*BalanceHeight)];
     
     [self.view addSubview:self.name];
     [_name autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:logo withOffset:10];

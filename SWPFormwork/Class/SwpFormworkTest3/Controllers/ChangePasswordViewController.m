@@ -131,6 +131,7 @@
         }else{
             [SVProgressHUD showSuccessWithStatus:@"发送成功"];
             SetUserDefault([resultObject objectForKey:@"message"], peopleId);
+            SetUserDefault([resultObject objectForKey:@"sessionid"], @"sessionid");
         }
     } swpResultError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
         
@@ -181,7 +182,8 @@
                         @"peopleId":GetUserDefault(peopleId),
                         @"userName":self.phoneNumber.text,
                         @"userPassword":self.zqNewPassword.text,
-                        @"authCode":self.authCode.text
+                        @"authCode":self.authCode.text,
+                        @"sessionid":GetUserDefault(@"sessionid")
                         };
     [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/updatePassword" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         if ([[resultObject objectForKey:@"code"]isEqualToString:@"0001"]) {
