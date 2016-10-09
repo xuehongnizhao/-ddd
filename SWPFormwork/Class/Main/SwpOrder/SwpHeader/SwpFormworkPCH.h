@@ -15,4 +15,5 @@
     #import "SwpFormworkHeader.h"
     #import "SwpRequest.h"
     #import "MJExtension.h"
+    #import "SwpWeakifyHeader.h"
 #endif /* SwpFormworkPCH_h */

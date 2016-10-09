@@ -156,6 +156,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == _tableViewRight) {
         [SwpTools swpToolCallPhone:@"18686772770" superView:self.view];
+        
         return;
     }
     

@@ -44,6 +44,9 @@
 		046878181D95050700CC0DB7 /* XMNPhotoStickLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046878011D95050700CC0DB7 /* XMNPhotoStickLayout.m */; };
 		046878191D95050700CC0DB7 /* XMNPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046878031D95050700CC0DB7 /* XMNPhotoManager.m */; };
 		0468781C1D9518EB00CC0DB7 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0468781B1D9518EB00CC0DB7 /* ChangePasswordViewController.m */; };
+		047C8F921DA9E4B4003835E5 /* NSString+Extensional.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C8F8F1DA9E4B4003835E5 /* NSString+Extensional.m */; };
+		047C8F931DA9E4B4003835E5 /* pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C8F911DA9E4B4003835E5 /* pinyin.m */; };
+		04E132D21DA88F700048F6D6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E132D11DA88F700048F6D6 /* SearchViewController.m */; };
 		2D88ED7D1CE9609D00E7E91C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88ED7C1CE9609D00E7E91C /* main.m */; };
 		2D88ED801CE9609D00E7E91C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88ED7F1CE9609D00E7E91C /* AppDelegate.m */; };
 		2D88ED821CE9609D00E7E91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D88ED811CE9609D00E7E91C /* Assets.xcassets */; };
@@ -158,6 +161,12 @@
 		046878051D95050700CC0DB7 /* XMNPhotoPickerFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPickerFramework.h; sourceTree = "<group>"; };
 		0468781A1D9518EB00CC0DB7 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/ChangePasswordViewController.h; sourceTree = SOURCE_ROOT; };
 		0468781B1D9518EB00CC0DB7 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/ChangePasswordViewController.m; sourceTree = SOURCE_ROOT; };
+		047C8F8E1DA9E4B4003835E5 /* NSString+Extensional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensional.h"; sourceTree = "<group>"; };
+		047C8F8F1DA9E4B4003835E5 /* NSString+Extensional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensional.m"; sourceTree = "<group>"; };
+		047C8F901DA9E4B4003835E5 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		047C8F911DA9E4B4003835E5 /* pinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pinyin.m; sourceTree = "<group>"; };
+		04E132D01DA88F700048F6D6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		04E132D11DA88F700048F6D6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		21F9E4976590E6F8E387DCD1 /* Pods-SwpFormwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwpFormwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwpFormwork/Pods-SwpFormwork.debug.xcconfig"; sourceTree = "<group>"; };
 		2D88ED781CE9609D00E7E91C /* SwpFormwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwpFormwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D88ED7C1CE9609D00E7E91C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -343,6 +352,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		047C8F8D1DA9E4B4003835E5 /* ChineseToPinYin */ = {
+			isa = PBXGroup;
+			children = (
+				047C8F8E1DA9E4B4003835E5 /* NSString+Extensional.h */,
+				047C8F8F1DA9E4B4003835E5 /* NSString+Extensional.m */,
+				047C8F901DA9E4B4003835E5 /* pinyin.h */,
+				047C8F911DA9E4B4003835E5 /* pinyin.m */,
+			);
+			path = ChineseToPinYin;
+			sourceTree = "<group>";
+		};
 		2D88ED6F1CE9609D00E7E91C = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +418,7 @@
 		2D88ED971CE9646500E7E91C /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
+				047C8F8D1DA9E4B4003835E5 /* ChineseToPinYin */,
 				0424C7511D9A145800940283 /* VPImageCropper */,
 				046877DC1D95050700CC0DB7 /* XMNPhotoPickerFramework */,
 				2D88ED981CE9646500E7E91C /* SwpTools */,
@@ -706,6 +727,8 @@
 		2D88EE1B1CE9699900E7E91C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04E132D01DA88F700048F6D6 /* SearchViewController.h */,
+				04E132D11DA88F700048F6D6 /* SearchViewController.m */,
 				046877C11D94AFE800CC0DB7 /* AddressListViewController.h */,
 				046877C21D94AFE800CC0DB7 /* AddressListViewController.m */,
 				042042891D9CB631003528EA /* DepartMentViewController.h */,
@@ -1015,6 +1038,7 @@
 				2D88EE541CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m in Sources */,
 				2D88EDEF1CE9646500E7E91C /* SwpSelectPhotographView.m in Sources */,
 				2D88EE2D1CE9699900E7E91C /* SwpNetworkModel.m in Sources */,
+				047C8F921DA9E4B4003835E5 /* NSString+Extensional.m in Sources */,
 				046877D91D94CB6400CC0DB7 /* ALView+PureLayout.m in Sources */,
 				046877C31D94AFE800CC0DB7 /* AddressListViewController.m in Sources */,
 				2D88EE461CE96A6800E7E91C /* SwpNavigationController.m in Sources */,
@@ -1054,6 +1078,7 @@
 				046878061D95050700CC0DB7 /* UIView+Animations.m in Sources */,
 				0424C7541D9A145800940283 /* VPImageCropperViewController.m in Sources */,
 				2D88EE4D1CE9741300E7E91C /* SwpUtils.m in Sources */,
+				04E132D21DA88F700048F6D6 /* SearchViewController.m in Sources */,
 				0424C6AB1D9925BF00940283 /* SelfInfoViewController.m in Sources */,
 				046877CC1D94C5A100CC0DB7 /* LoginViewController.m in Sources */,
 				0468781C1D9518EB00CC0DB7 /* ChangePasswordViewController.m in Sources */,
@@ -1068,6 +1093,7 @@
 				2D88EDE21CE9646500E7E91C /* SwpGuidePage.m in Sources */,
 				046877DB1D94CB6400CC0DB7 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				0468780A1D95050700CC0DB7 /* XMNPhotoPreviewController.m in Sources */,
+				047C8F931DA9E4B4003835E5 /* pinyin.m in Sources */,
 				2D88EDE41CE9646500E7E91C /* SwpGuideCell.m in Sources */,
 				2D88EE4A1CE96A7600E7E91C /* SwpFormworkViewController.m in Sources */,
 				0468780C1D95050700CC0DB7 /* XMNAlbumModel.m in Sources */,

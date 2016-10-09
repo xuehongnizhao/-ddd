@@ -11,6 +11,7 @@
 #import "PeopleInfo.h"
 #import "ChangePasswordViewController.h"
 #import "SelfInfoViewController.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 @interface MineViewController ()
 @property (strong, nonatomic)UIImageView    *headImage;
 @property (strong, nonatomic)UILabel        *nameLabel;
@@ -26,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.fd_prefersNavigationBarHidden=YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated{

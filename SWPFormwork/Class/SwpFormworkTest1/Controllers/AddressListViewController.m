@@ -9,7 +9,9 @@
 #import "AddressListViewController.h"
 #import "TeamInfo.h"
 #import "BossViewController.h"
-
+#import "SearchViewController.h"
+#import "DepartmentInfo.h"
+#import "PeopleInfo.h"
 #define TEAMBUTTONTAG 928
 @interface AddressListViewController ()
 @property (strong, nonatomic)NSMutableArray     *teamInfo;
@@ -68,7 +70,7 @@
     [_teamImage autoSetDimensionsToSize:CGSizeMake(300*BalanceWidth, 500*BalanceWidth)];
     
 
-    NSArray *nameArr=@[@"哈尔滨支队",@"齐齐哈尔支队",@"大庆支队",@"牡丹江支队",@"佳木斯支队",@"绥化支队",@"伊春支队",@"鸡西支队",@"黑河支队",@"双鸭山支队",@"大兴安岭支队",@"鹤岗支队",@"七台河支队"];
+    NSArray *nameArr=@[@"哈尔滨支队",@"佳木斯支队",@"牡丹江支队",@"大庆支队",@"双鸭山支队",@"齐齐哈尔支队",@"大兴安岭支队",@"鹤岗支队",@"绥化支队",@"鸡西支队",@"黑河支队",@"七台河支队",@"伊春支队"];
     int i=1;
     for (NSString *name in nameArr) {
         [self creatTeamInfo:name withIndex:i];
@@ -77,7 +79,17 @@
 }
 
 - (void)rightItemAction{
-    
+    NSMutableArray *array=[NSMutableArray array];
+    for (TeamInfo *teamInfo in self.teamInfo) {
+        for (DepartmentInfo *departmentInfo in teamInfo.appGroupDataList) {
+            for (PeopleInfo *peopleInfo in departmentInfo.appPeopleDatas) {
+                [array addObject:peopleInfo.peopleName];
+            }
+        }
+    }
+    SearchViewController *firvc=[[SearchViewController alloc]init];
+    firvc.hehearray=array;
+    [self.navigationController pushViewController:firvc animated:YES];
 }
 
 - (void)creatTeamInfo:(NSString *)name withIndex:(NSInteger)index{

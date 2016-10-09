@@ -66,7 +66,6 @@
     UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     if (!cell) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-       
     }
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
@@ -86,8 +85,7 @@
     [label autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:10];
     [label autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [label autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:10];
-    
-    
+
     return cell;
 }
 

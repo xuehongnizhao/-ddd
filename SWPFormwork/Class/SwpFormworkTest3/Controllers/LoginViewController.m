@@ -110,8 +110,7 @@
     }
     return _login;
 }
-//    139.129.218.191:mis/contacts/images/photo/1002045100001.png
-//    :8080/web/contacts/getAllByPeopleId
+
 
 - (void)loginAction{
     NSString *name=self.name.text;

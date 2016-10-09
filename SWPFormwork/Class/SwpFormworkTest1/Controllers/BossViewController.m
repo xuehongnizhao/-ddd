@@ -71,6 +71,7 @@
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
     }
+    
     DepartmentInfo *info=[self.departmentInfo objectAtIndex:indexPath.row];
     cell.textLabel.text=info.groupName;
     cell.textLabel.textAlignment=NSTextAlignmentCenter;

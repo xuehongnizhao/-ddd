@@ -7,12 +7,13 @@
 //
 
 #import "SearchViewController.h"
-
+#import "NSString+Extensional.h"
 @interface SearchViewController ()<UISearchResultsUpdating,UITableViewDelegate,UITableViewDataSource>
-@property (strong, nonatomic) NSMutableArray *hehearray;
+
 @property (strong, nonatomic) UISearchController *searchController;
 @property (strong, nonatomic) NSMutableArray *searchList;
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSMutableDictionary *dataList;//存放拼音和汉字
 
 @end
 
@@ -21,19 +22,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    for (int i=0; i<50; i++) {
-        [self.hehearray addObject:[NSString stringWithFormat:@"呵呵%d",i]];
-    }
     
     _searchController=[[UISearchController alloc]initWithSearchResultsController:nil];
     _searchController.searchResultsUpdater=self;
-//    _searchController.dimsBackgroundDuringPresentation=NO;
-    _searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
+    _searchController.dimsBackgroundDuringPresentation=NO;
+    _searchController.hidesNavigationBarDuringPresentation=NO;
     
     self.tableView.tableHeaderView=self.searchController.searchBar;
     [self.view addSubview:self.tableView];
+    [_tableView autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [_tableView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [_tableView autoPinEdgeToSuperviewEdge: ALEdgeRight];
+    [_tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
 }
 
+- (void)setHehearray:(NSMutableArray *)hehearray{
+    _hehearray=hehearray;
+    
+    _dataList=[NSMutableDictionary dictionary];
+    for (NSString *hanzi in _hehearray) {
+        NSString *pinyin=[hanzi firstLettersForSort:YES];
+        [_dataList setObject:hanzi forKey:pinyin];
+    }
+    
+}
 #pragma mark --- tableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -49,7 +61,7 @@
     if (!cell) {
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    if (self.searchController.active) {
+    if (self.searchController.active && self.searchList.count>0) {
         cell.textLabel.text=self.searchList[indexPath.row];
     }else{
         cell.textLabel.text=[self.hehearray objectAtIndex:indexPath.row];
@@ -57,31 +69,59 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
     NSString *searchString=self.searchController.searchBar.text;
-    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@",searchString];
-    [self.searchList removeAllObjects];
-    self.searchList=[NSMutableArray arrayWithArray:self.hehearray];
-    [self.searchList filterUsingPredicate:predicate];
     if (searchString.length==0) {
+        self.searchList=[NSMutableArray arrayWithArray:self.hehearray];
+        [self.tableView reloadData];
         return;
     }
-    [self.tableView reloadData];
-}
-- (NSMutableArray *)hehearray{
-    if (!_hehearray) {
-        _hehearray=[NSMutableArray array];
+    if ([self IsChinese:searchString]) {
+        NSPredicate *predicate=[NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@",searchString];
+        [self.searchList removeAllObjects];
+        self.searchList=[NSMutableArray arrayWithArray:self.hehearray];
+        [self.searchList filterUsingPredicate:predicate];
+        if (searchString.length==0) {
+            self.searchList=[NSMutableArray arrayWithArray:self.hehearray];
+        }
+        [self.tableView reloadData];
+    }else{
+        [self.searchList removeAllObjects];
+        for (NSString *string in [self.dataList allKeys]) {
+            if ([string containsString:searchString]) {
+                [self.searchList addObject:[self.dataList objectForKey:string]];
+            }
+        }
+
+        [self.tableView reloadData];
     }
-    return _hehearray;
+
+}
+
+-(BOOL)IsChinese:(NSString *)str {
+    for(int i=0; i< [str length];i++){
+        
+        int a = [str characterAtIndex:i];
+        
+        if( a > 0x4e00 && a < 0x9fff){
+        
+        return YES;
+        }
+    } return NO;
 }
 
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initForAutoLayout];
         _tableView.delegate=self;
         _tableView.dataSource=self;
         
     }
     return _tableView;
 }
+
 @end
