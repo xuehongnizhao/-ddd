@@ -8,6 +8,7 @@
 
 #import "SearchViewController.h"
 #import "NSString+Extensional.h"
+#import "IQKeyboardManager.h"
 @interface SearchViewController ()<UISearchResultsUpdating,UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UISearchController *searchController;
@@ -21,21 +22,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    [[IQKeyboardManager sharedManager] setEnable:NO];
     _searchController=[[UISearchController alloc]initWithSearchResultsController:nil];
     _searchController.searchResultsUpdater=self;
     _searchController.dimsBackgroundDuringPresentation=NO;
-    _searchController.hidesNavigationBarDuringPresentation=NO;
-    
+
     self.tableView.tableHeaderView=self.searchController.searchBar;
     [self.view addSubview:self.tableView];
     [_tableView autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [_tableView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
     [_tableView autoPinEdgeToSuperviewEdge: ALEdgeRight];
     [_tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+       [[IQKeyboardManager sharedManager] setEnable:YES];
+}
 - (void)setHehearray:(NSMutableArray *)hehearray{
     _hehearray=hehearray;
     
@@ -62,9 +66,14 @@
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     if (self.searchController.active && self.searchList.count>0) {
-        cell.textLabel.text=self.searchList[indexPath.row];
+        NSString *string=self.searchList[indexPath.row];
+        NSArray *array=[string componentsSeparatedByString:@","];
+        cell.textLabel.text=array[0];
+        
     }else{
-        cell.textLabel.text=[self.hehearray objectAtIndex:indexPath.row];
+        NSString *string=self.hehearray[indexPath.row];
+        NSArray *array=[string componentsSeparatedByString:@","];
+        cell.textLabel.text=array[0];
     }
     return cell;
 }
@@ -92,7 +101,7 @@
     }else{
         [self.searchList removeAllObjects];
         for (NSString *string in [self.dataList allKeys]) {
-            if ([string containsString:searchString]) {
+            if ([[string uppercaseString] containsString:searchString]||[string containsString:searchString]) {
                 [self.searchList addObject:[self.dataList objectForKey:string]];
             }
         }

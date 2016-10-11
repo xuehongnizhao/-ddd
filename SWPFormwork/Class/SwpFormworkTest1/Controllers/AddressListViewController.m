@@ -83,7 +83,8 @@
     for (TeamInfo *teamInfo in self.teamInfo) {
         for (DepartmentInfo *departmentInfo in teamInfo.appGroupDataList) {
             for (PeopleInfo *peopleInfo in departmentInfo.appPeopleDatas) {
-                [array addObject:peopleInfo.peopleName];
+                NSString *string=[NSString stringWithFormat:@"%@,%@",peopleInfo.peopleName,peopleInfo.telephone];
+                [array addObject:string];
             }
         }
     }
@@ -96,7 +97,7 @@
     NSInteger hang=(index-1)/2;
     UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(0+150*BalanceWidth*((index-1)%2), 34.5+66*BalanceWidth*hang, 150*BalanceWidth,66*BalanceWidth)];
     UIImageView *imagv=[[UIImageView alloc] initForAutoLayout];
-    imagv.image= [UIImage imageNamed:[NSString stringWithFormat:@"team_%d",index]];
+    imagv.image= [UIImage imageNamed:[NSString stringWithFormat:@"team_%ld",(long)index]];
     [button addSubview:imagv];
     [imagv autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:10];
     [imagv autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
@@ -135,7 +136,7 @@
     }];
 }
 - (void)getDataFromNet{
-    [SVProgressHUD showWithStatus:@"信息有变\n正在加载..."];
+    [SVProgressHUD showWithStatus:@"信息有变\n正在加载"];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     NSDictionary *dic=@{
                         @"peopleId":GetUserDefault(peopleId)

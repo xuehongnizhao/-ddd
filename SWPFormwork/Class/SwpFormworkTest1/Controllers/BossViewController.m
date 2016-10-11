@@ -31,10 +31,12 @@
     [super viewWillDisappear:animated];
     [self.rdv_tabBarController setTabBarHidden:NO];
 }
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.tableView reloadData];
 }
+
 - (void)setDataList:(TeamInfo *)dataList{
     _dataList=dataList;
     self.departmentInfo=_dataList.appGroupDataList;
@@ -81,10 +83,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DepartMentViewController *firVC=[[DepartMentViewController alloc]init];
     firVC.dataList=self.dataList.appGroupDataList[indexPath.row];
     [self.navigationController pushViewController:firVC animated:YES];
 }
+
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView=[[UITableView alloc]initForAutoLayout];

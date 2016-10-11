@@ -78,7 +78,6 @@
 		2D88EE451CE96A6800E7E91C /* SwpBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE3C1CE96A6800E7E91C /* SwpBaseViewController.m */; };
 		2D88EE461CE96A6800E7E91C /* SwpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE401CE96A6800E7E91C /* SwpNavigationController.m */; };
 		2D88EE471CE96A6800E7E91C /* SwpTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE431CE96A6800E7E91C /* SwpTabBarController.m */; };
-		2D88EE4A1CE96A7600E7E91C /* SwpFormworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE491CE96A7600E7E91C /* SwpFormworkViewController.m */; };
 		2D88EE4D1CE9741300E7E91C /* SwpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE4C1CE9741300E7E91C /* SwpUtils.m */; };
 		2D88EE541CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE531CE977B500E7E91C /* AppDelegate+MasterInterfaceData.m */; };
 		3636417330415FCF0934850E /* libPods-SwpFormwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 667DB3A3D3E9F0F4468686BA /* libPods-SwpFormwork.a */; };
@@ -228,8 +227,6 @@
 		2D88EE401CE96A6800E7E91C /* SwpNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNavigationController.m; sourceTree = "<group>"; };
 		2D88EE421CE96A6800E7E91C /* SwpTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpTabBarController.h; sourceTree = "<group>"; };
 		2D88EE431CE96A6800E7E91C /* SwpTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpTabBarController.m; sourceTree = "<group>"; };
-		2D88EE481CE96A7600E7E91C /* SwpFormworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpFormworkViewController.h; sourceTree = "<group>"; };
-		2D88EE491CE96A7600E7E91C /* SwpFormworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpFormworkViewController.m; sourceTree = "<group>"; };
 		2D88EE4B1CE9741300E7E91C /* SwpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpUtils.h; sourceTree = "<group>"; };
 		2D88EE4C1CE9741300E7E91C /* SwpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpUtils.m; sourceTree = "<group>"; };
 		2D88EE521CE977B500E7E91C /* AppDelegate+MasterInterfaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MasterInterfaceData.h"; sourceTree = "<group>"; };
@@ -666,7 +663,6 @@
 			isa = PBXGroup;
 			children = (
 				2D88EE3A1CE96A6800E7E91C /* SwpBaseViewController */,
-				2D88EE3D1CE96A6800E7E91C /* SwpFormworkViewController */,
 				2D88EE3E1CE96A6800E7E91C /* SwpNavigationController */,
 				2D88EE411CE96A6800E7E91C /* SwpTabBarViewController */,
 				2D88EE441CE96A6800E7E91C /* SwpWebViewController */,
@@ -844,15 +840,6 @@
 				2D88EE3C1CE96A6800E7E91C /* SwpBaseViewController.m */,
 			);
 			path = SwpBaseViewController;
-			sourceTree = "<group>";
-		};
-		2D88EE3D1CE96A6800E7E91C /* SwpFormworkViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2D88EE481CE96A7600E7E91C /* SwpFormworkViewController.h */,
-				2D88EE491CE96A7600E7E91C /* SwpFormworkViewController.m */,
-			);
-			path = SwpFormworkViewController;
 			sourceTree = "<group>";
 		};
 		2D88EE3E1CE96A6800E7E91C /* SwpNavigationController */ = {
@@ -1095,7 +1082,6 @@
 				0468780A1D95050700CC0DB7 /* XMNPhotoPreviewController.m in Sources */,
 				047C8F931DA9E4B4003835E5 /* pinyin.m in Sources */,
 				2D88EDE41CE9646500E7E91C /* SwpGuideCell.m in Sources */,
-				2D88EE4A1CE96A7600E7E91C /* SwpFormworkViewController.m in Sources */,
 				0468780C1D95050700CC0DB7 /* XMNAlbumModel.m in Sources */,
 				046878171D95050700CC0DB7 /* XMNPhotoPreviewCell.m in Sources */,
 				0424C6A81D98EBE700940283 /* PeopleInfo.m in Sources */,

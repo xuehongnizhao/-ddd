@@ -2,7 +2,7 @@ project 'SwpFormwork.xcodeproj'
 
   source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line to define a global platform for your project
-  platform :ios, '7.0'
+  platform :ios, '8.0'
 
 target 'SwpFormwork' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
@@ -16,12 +16,11 @@ target 'SwpFormwork' do
   pod 'SwpTextView'                           # 文本输入
   pod 'SVProgressHUD'                         # 提示信息库
   pod 'IQKeyboardManager'                     # 文本输入
-  pod 'RDVTabBarController'              		  # tabBar
-  pod 'MJExtension'					                  # MJ解析数据解析
+  pod 'RDVTabBarController'              	  # tabBar
+  pod 'MJExtension'					          # MJ解析数据解析
   pod 'Masonry'                               # Masonry 自动布局框架
-  pod 'FDFullscreenPopGesture_Bell'		      	# Navigation
-  pod 'DOPDropDownMenu-Enhanced'				      # 分类筛选
-  pod 'WebViewJavascriptBridge'				        # webView 交互
-
+  pod 'FDFullscreenPopGesture_Bell'		      # Navigation
+  pod 'DOPDropDownMenu-Enhanced'			  # 分类筛选
+  pod 'WebViewJavascriptBridge'				       
 
 end
