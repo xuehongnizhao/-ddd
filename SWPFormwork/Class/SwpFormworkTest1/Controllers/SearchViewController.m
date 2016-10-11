@@ -46,6 +46,7 @@
     _dataList=[NSMutableDictionary dictionary];
     for (NSString *hanzi in _hehearray) {
         NSString *pinyin=[hanzi firstLettersForSort:YES];
+        pinyin =[pinyin stringByReplacingOccurrencesOfString:@" " withString:@""];
         [_dataList setObject:hanzi forKey:pinyin];
     }
     
@@ -68,12 +69,12 @@
     if (self.searchController.active && self.searchList.count>0) {
         NSString *string=self.searchList[indexPath.row];
         NSArray *array=[string componentsSeparatedByString:@","];
-        cell.textLabel.text=array[0];
+        cell.textLabel.text=[NSString stringWithFormat:@"%@ %@",array[0],array[1]];
         
     }else{
         NSString *string=self.hehearray[indexPath.row];
         NSArray *array=[string componentsSeparatedByString:@","];
-        cell.textLabel.text=array[0];
+        cell.textLabel.text=[NSString stringWithFormat:@"%@ %@",array[0],array[1]];
     }
     return cell;
 }
