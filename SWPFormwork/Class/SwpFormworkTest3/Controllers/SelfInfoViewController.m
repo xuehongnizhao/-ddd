@@ -37,7 +37,7 @@
 - (void)setUI{
     [self.view addSubview:self.faceImage];
     if (self.peopleInfo.photo.length>0) {
-        NSString *urlString=[NSString stringWithFormat:@"http://139.129.218.191:8080/web/%@",self.peopleInfo.photo];
+        NSString *urlString=[NSString stringWithFormat:@"http://address.hongdingnet.com/web/%@",self.peopleInfo.photo];
         NSURL *url=[NSURL URLWithString:urlString];
         NSData *data=[NSData dataWithContentsOfURL:url];
         UIImage *image=[UIImage imageWithData:data];
@@ -78,7 +78,7 @@
                         @"peopleId":GetUserDefault(peopleId)
                         };
     
-    [SwpRequest swpPOSTAddFile:@"http://139.129.218.191:8080/web/contacts/uploadPhoto" parameters:dic isEncrypt:NO fileName:@"photo" fileData:imageData swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    [SwpRequest swpPOSTAddFile:@"http://address.hongdingnet.com/web/contacts/uploadPhoto" parameters:dic isEncrypt:NO fileName:@"photo" fileData:imageData swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         self.peopleInfo.photo=[resultObject objectForKey:@"message"];
         [self setUI];
         [SVProgressHUD showSuccessWithStatus:@"上传成功"];

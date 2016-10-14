@@ -16,6 +16,7 @@
 		0424C7541D9A145800940283 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C7531D9A145800940283 /* VPImageCropperViewController.m */; };
 		0424C75D1D9A436D00940283 /* DepartmentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C75C1D9A436D00940283 /* DepartmentInfo.m */; };
 		0424C7601D9A443000940283 /* TeamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C75F1D9A443000940283 /* TeamInfo.m */; };
+		045BC12D1DB0A60B000294B3 /* CallInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045BC12C1DB0A60B000294B3 /* CallInfoViewController.m */; };
 		046877C31D94AFE800CC0DB7 /* AddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877C21D94AFE800CC0DB7 /* AddressListViewController.m */; };
 		046877C61D94B00700CC0DB7 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877C51D94B00700CC0DB7 /* MessageViewController.m */; };
 		046877C91D94B00F00CC0DB7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877C81D94B00F00CC0DB7 /* MineViewController.m */; };
@@ -102,6 +103,8 @@
 		0424C75C1D9A436D00940283 /* DepartmentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DepartmentInfo.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/DepartmentInfo.m; sourceTree = SOURCE_ROOT; };
 		0424C75E1D9A443000940283 /* TeamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamInfo.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/TeamInfo.h; sourceTree = SOURCE_ROOT; };
 		0424C75F1D9A443000940283 /* TeamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamInfo.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/TeamInfo.m; sourceTree = SOURCE_ROOT; };
+		045BC12B1DB0A60B000294B3 /* CallInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallInfoViewController.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/CallInfoViewController.h; sourceTree = SOURCE_ROOT; };
+		045BC12C1DB0A60B000294B3 /* CallInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallInfoViewController.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/CallInfoViewController.m; sourceTree = SOURCE_ROOT; };
 		046877C11D94AFE800CC0DB7 /* AddressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressListViewController.h; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/AddressListViewController.h; sourceTree = SOURCE_ROOT; };
 		046877C21D94AFE800CC0DB7 /* AddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressListViewController.m; path = SWPFormwork/Class/SwpFormworkTest1/Controllers/AddressListViewController.m; sourceTree = SOURCE_ROOT; };
 		046877C41D94B00700CC0DB7 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageViewController.h; path = SWPFormwork/Class/SwpFormworkTest2/Controllers/MessageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -731,6 +734,8 @@
 				0420428A1D9CB631003528EA /* DepartMentViewController.m */,
 				0420427D1D9B9373003528EA /* BossViewController.h */,
 				0420427E1D9B9373003528EA /* BossViewController.m */,
+				045BC12B1DB0A60B000294B3 /* CallInfoViewController.h */,
+				045BC12C1DB0A60B000294B3 /* CallInfoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1080,6 +1085,7 @@
 				2D88EDE21CE9646500E7E91C /* SwpGuidePage.m in Sources */,
 				046877DB1D94CB6400CC0DB7 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				0468780A1D95050700CC0DB7 /* XMNPhotoPreviewController.m in Sources */,
+				045BC12D1DB0A60B000294B3 /* CallInfoViewController.m in Sources */,
 				047C8F931DA9E4B4003835E5 /* pinyin.m in Sources */,
 				2D88EDE41CE9646500E7E91C /* SwpGuideCell.m in Sources */,
 				0468780C1D95050700CC0DB7 /* XMNAlbumModel.m in Sources */,

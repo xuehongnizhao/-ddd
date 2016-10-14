@@ -27,7 +27,7 @@
     NSDictionary *dic=@{
                         @"peopleId":GetUserDefault(peopleId)
                         };
-    [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/getInform" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    [SwpRequest swpPOST:@"http://address.hongdingnet.com/web/contacts/getInform" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         _dataList=[NSMutableArray array];
         NSArray *arr=[resultObject objectForKey:@"appInforDatas"];
         for (NSDictionary *dic in arr) {

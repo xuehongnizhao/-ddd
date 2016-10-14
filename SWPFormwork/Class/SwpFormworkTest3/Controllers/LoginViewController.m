@@ -127,7 +127,7 @@
                           @"userName":name,
                           @"userPassword":password
                           };
-    [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/userLogin" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject){
+    [SwpRequest swpPOST:@"http://address.hongdingnet.com/web/contacts/userLogin" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject){
         if ([[resultObject objectForKey:@"code"]isEqualToString:@"0000" ]) {
             
             SetUserDefault([resultObject objectForKey:@"message"], peopleId);

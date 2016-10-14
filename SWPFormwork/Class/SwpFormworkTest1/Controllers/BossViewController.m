@@ -32,10 +32,6 @@
     [self.rdv_tabBarController setTabBarHidden:NO];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    [self.tableView reloadData];
-}
 
 - (void)setDataList:(TeamInfo *)dataList{
     _dataList=dataList;
@@ -45,10 +41,9 @@
 }
 
 - (void)setUI{
-
-    self.title=@"总队机关";
     
     [self.view addSubview:self.tableView];
+    
     [_tableView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10];
     [_tableView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
     [_tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
@@ -73,15 +68,40 @@
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
     }
-    
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    while ([cell.contentView.subviews lastObject]!= nil) {
+        [[cell.contentView.subviews lastObject]removeFromSuperview];
+    }
     DepartmentInfo *info=[self.departmentInfo objectAtIndex:indexPath.row];
     cell.textLabel.text=info.groupName;
     cell.textLabel.textAlignment=NSTextAlignmentCenter;
-    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"http://139.129.218.191:8080%@",info.groupIcon]];
-    [cell.imageView sd_setImageWithURL:url];
+    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"http://address.hongdingnet.com%@",info.groupIcon]];
+    UIImageView *imagView=[[UIImageView alloc]initWithFrame:CGRectMake(20, 17.5, 40, 40)];
+    [imagView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Boss"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    
+    }];
+
+    [cell.contentView addSubview:imagView];
     return cell;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 30)];
+    view.backgroundColor=[UIColor redColor];
+    UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(5, 5, 400, 20)];
+    label.textColor=[UIColor whiteColor];
+    label.text=@"哈尔滨支队";
+    [view addSubview:label];
+    return view;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DepartMentViewController *firVC=[[DepartMentViewController alloc]init];

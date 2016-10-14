@@ -41,7 +41,7 @@
     NSDictionary *dic=@{
                         @"peopleId":GetUserDefault(peopleId)
                         };
-    [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/getPeopleById" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    [SwpRequest swpPOST:@"http://address.hongdingnet.com/web/contacts/getPeopleById" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         NSDictionary *dic=resultObject;
         SetUserDefault(dic, myInfoDic);
         
@@ -66,7 +66,7 @@
     NSDictionary *dic=GetUserDefault(myInfoDic);
     NSString *imageUrl=[dic objectForKey:@"photo"];
     if (imageUrl.length>0) {
-        NSString *urlString=[NSString stringWithFormat:@"http://139.129.218.191:8080/web/%@",imageUrl];
+        NSString *urlString=[NSString stringWithFormat:@"http://address.hongdingnet.com/web/%@",imageUrl];
         NSURL *url=[NSURL URLWithString:urlString];
         NSData *data=[NSData dataWithContentsOfURL:url];
         UIImage *imageddd=[UIImage imageWithData:data];

@@ -51,14 +51,7 @@
     [headView addSubview:dissmiss];
     [dissmiss autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:22];
     [dissmiss autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:2];
-    [dissmiss autoSetDimensionsToSize:CGSizeMake(40, 40)];
-
-//    UIImageView *imageV1=[[UIImageView alloc]initForAutoLayout];
-//    imageV1.image=[UIImage imageNamed:@"dianhuahao"];
-//    [self.view addSubview:imageV1];
-//    [imageV1 autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:headView withOffset:30];
-//    [imageV1 autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
-//    [imageV1 autoSetDimensionsToSize:CGSizeMake(30, 30)];
+    [dissmiss autoSetDimensionsToSize:CGSizeMake(40, 40)];   
     
     [self.view addSubview:self.phoneNumber];
     [_phoneNumber autoPinEdgeToSuperviewEdge:ALEdgeLeft];
@@ -83,8 +76,6 @@
     [_zqNewPassword autoPinEdgeToSuperviewEdge:ALEdgeRight];
     [_zqNewPassword autoPinEdgeToSuperviewEdge:ALEdgeLeft];
     [_zqNewPassword autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.authCode withOffset:10];
-//    [self.view addSubview:self.confirmNewPassword];
-//    [_confirmNewPassword autoSetDimension:ALDimensionHeight toSize:40];
     
     [self.view addSubview:self.complete];
     [_complete autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.zqNewPassword withOffset:20];
@@ -105,7 +96,6 @@
         if (GetUserDefault(lastName)) {
             _phoneNumber.text=GetUserDefault(lastName);
         }
-
     }
     return _phoneNumber;
 }
@@ -125,7 +115,7 @@
     NSDictionary *dic=@{
                         @"userName":self.phoneNumber.text
                         };
-    [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/getCode" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    [SwpRequest swpPOST:@"http://address.hongdingnet.com/web/contacts/getCode" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         if ([[resultObject objectForKey:@"code"]isEqualToString:@"0002"]) {
             [SVProgressHUD showErrorWithStatus:[resultObject objectForKey:@"message"]];
         }else{
@@ -185,7 +175,7 @@
                         @"authCode":self.authCode.text,
                         @"sessionid":GetUserDefault(@"sessionid")
                         };
-    [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/updatePassword" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    [SwpRequest swpPOST:@"http://address.hongdingnet.com/web/contacts/updatePassword" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         if ([[resultObject objectForKey:@"code"]isEqualToString:@"0001"]) {
             [SVProgressHUD showErrorWithStatus:[resultObject objectForKey:@"message"]];
         }else if ([[resultObject objectForKey:@"code"]isEqualToString:@"0002"]){
@@ -198,15 +188,5 @@
         
     }];
 }
-//- (UITextField *)confirmNewPassword{
-//    if (!_confirmNewPassword) {
-//        _confirmNewPassword=[[UITextField alloc]initForAutoLayout];
-//        _confirmNewPassword.layer.borderWidth=1;
-//        _confirmNewPassword.layer.borderColor=[UIColor colorWithWhite:.8 alpha:1].CGColor;
-//        _confirmNewPassword.placeholder=@"请确认新密码";
-//
-//        
-//    }
-//    return _confirmNewPassword;
-//}
+
 @end

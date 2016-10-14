@@ -12,6 +12,7 @@
 #import "SearchViewController.h"
 #import "DepartmentInfo.h"
 #import "PeopleInfo.h"
+#import "Masonry.h"
 #define TEAMBUTTONTAG 928
 @interface AddressListViewController ()
 @property (strong, nonatomic)NSMutableArray     *teamInfo;
@@ -31,12 +32,12 @@
 - (void)setUI{
     
     [self setNavigationBarTitle:@"通讯录" textColor:[UIColor whiteColor] titleFontSize:@20];
-    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(rightItemAction)];
     
     UIScrollView *backGroundView=[[UIScrollView alloc]initForAutoLayout];
     backGroundView.backgroundColor=[UIColor whiteColor];
     backGroundView.contentSize=CGSizeMake(SCREEN_WIDTH, 500*BalanceWidth+100*BalanceWidth+30+64);
     [self.view addSubview:backGroundView];
+
     [backGroundView autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [backGroundView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
     [backGroundView autoPinEdgeToSuperviewEdge:ALEdgeRight];
@@ -78,6 +79,10 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+        self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(rightItemAction)];
+}
 - (void)rightItemAction{
     NSMutableArray *array=[NSMutableArray array];
     for (TeamInfo *teamInfo in self.teamInfo) {
@@ -113,11 +118,11 @@
     [button addTarget:self action:@selector(teamButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     button.tag=TEAMBUTTONTAG+index;
     [self.teamImage addSubview:button];
-    
-    
+
 }
 
 - (void)teamButtonAction:(UIButton *)button{
+    
     BossViewController *firVC=[[BossViewController alloc]init];
     firVC.dataList=self.teamInfo[button.tag-TEAMBUTTONTAG];
     [self.navigationController pushViewController:firVC animated:YES];
@@ -125,7 +130,8 @@
 }
 
 - (void)judgeGetData{
-    [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/getUpdated" parameters:nil isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    
+    [SwpRequest swpPOST:@"http://address.hongdingnet.com/web/contacts/getUpdated" parameters:nil isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         if ([[resultObject objectForKey:@"data"]isEqualToString:GetUserDefault(lastChangeData)]) {
             return ;
         }
@@ -136,13 +142,14 @@
     }];
 }
 - (void)getDataFromNet{
+    
     [SVProgressHUD showWithStatus:@"信息有变\n正在加载"];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     NSDictionary *dic=@{
                         @"peopleId":GetUserDefault(peopleId)
                         };
     
-    [SwpRequest swpPOST:@"http://139.129.218.191:8080/web/contacts/getAllByPeopleId" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    [SwpRequest swpPOST:@"http://address.hongdingnet.com/web/contacts/getAllByPeopleId" parameters:dic isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         [_teamInfo removeAllObjects];
         for (NSDictionary *dic in [resultObject objectForKey:@"appTeamDatas"]) {
             TeamInfo *info=[TeamInfo mj_objectWithKeyValues:dic];
@@ -154,7 +161,6 @@
     } swpResultError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
         
     }];
-
 }
 
 - (UIButton *)bossButton{

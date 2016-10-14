@@ -36,7 +36,7 @@
 
 - (void)setUI{
     UIWebView *webView=[[UIWebView alloc]initForAutoLayout];
-    NSString *urlSting=[NSString stringWithFormat:@"http://139.129.218.191:8080/web/contacts/page/inform/informData.html?inFormID=%@",_webID];
+    NSString *urlSting=[NSString stringWithFormat:@"http://address.hongdingnet.com/web/contacts/page/inform/informData.html?inFormID=%@",_webID];
     NSURL *url=[NSURL URLWithString:urlSting];
     [self.view addSubview:webView];
     [webView autoPinEdgeToSuperviewEdge:ALEdgeTop];

@@ -35,9 +35,14 @@
 - (void)setDataList:(DepartmentInfo *)dataList{
     _dataList=dataList;
     _leftDataList=[NSMutableArray array];
+    NSMutableArray *noOrder=[NSMutableArray array];
     for (PeopleInfo *info in _dataList.appPeopleDatas) {
-        if (![self.leftDataList.lastObject isEqualToString:info.departments]) {
-            [self.leftDataList addObject:info.departments];
+        [noOrder addObject:info.departments];
+    }
+    
+    for (NSString *str in noOrder) {
+        if (![self.leftDataList containsObject:str]) {
+            [self.leftDataList addObject:str];
         }
     }
     _rightDataList=[NSMutableArray array];
@@ -54,13 +59,13 @@
 - (void)setUI{
     
     [self.view addSubview:self.tableViewLeft];
-    [_tableViewLeft autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [_tableViewLeft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:2];
     [_tableViewLeft autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:5];
     [_tableViewLeft autoPinEdgeToSuperviewEdge:ALEdgeBottom ];
-    [_tableViewLeft autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH/3];
+    [_tableViewLeft autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH*5/12];
     
     [self.view addSubview:self.tableViewRight];
-    [_tableViewRight autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH/3*2];
+    [_tableViewRight autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH*6/12];
     [_tableViewRight autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:5];
     [_tableViewRight autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:5];
     [_tableViewRight autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:5];
@@ -89,8 +94,13 @@
         UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
         if (!cell) {
             cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-         
+            cell.selectedBackgroundView=[[UIView alloc]initWithFrame:cell.frame];
+            cell.selectedBackgroundView.backgroundColor=[UIColor orangeColor];
         }
+        if (indexPath.row==0) {
+            cell.selected=YES;
+        }
+        
         cell.textLabel.text=self.leftDataList[indexPath.row];
         cell.textLabel.font=[UIFont systemFontOfSize:14];
         return cell;
@@ -155,7 +165,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == _tableViewRight) {
-        [SwpTools swpToolCallPhone:@"18686772770" superView:self.view];
+        [SwpTools swpToolCallPhone:@"" superView:self.view];
         
         return;
     }
