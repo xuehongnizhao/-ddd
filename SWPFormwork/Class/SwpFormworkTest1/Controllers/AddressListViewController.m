@@ -84,11 +84,12 @@
         self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(rightItemAction)];
 }
 - (void)rightItemAction{
+    //这里非常乱希望后人能看懂
     NSMutableArray *array=[NSMutableArray array];
     for (TeamInfo *teamInfo in self.teamInfo) {
         for (DepartmentInfo *departmentInfo in teamInfo.appGroupDataList) {
             for (PeopleInfo *peopleInfo in departmentInfo.appPeopleDatas) {
-                NSString *string=[NSString stringWithFormat:@"%@,%@",peopleInfo.peopleName,peopleInfo.telephone];
+                NSString *string=[NSString stringWithFormat:@"%@,%@",peopleInfo.peopleName,peopleInfo.phone];
                 [array addObject:string];
             }
         }

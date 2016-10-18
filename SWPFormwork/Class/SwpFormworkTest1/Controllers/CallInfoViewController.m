@@ -24,8 +24,8 @@
     self.rdv_tabBarController.tabBarHidden=YES;
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
     self.rdv_tabBarController.tabBarHidden=NO;
 }
 - (void)setPeopleInfo:(PeopleInfo *)peopleInfo{
@@ -213,6 +213,13 @@
                     [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
                     [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
                     
+                    UIImageView *imageView=[[UIImageView alloc]initForAutoLayout];
+                    imageView.image=[UIImage imageNamed:@"callPhone"];
+                    [cell.contentView addSubview:imageView];
+                    [imageView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:20];
+                    [imageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+                    [imageView autoSetDimensionsToSize:CGSizeMake(20, 20)];
+                    
                 }
                     break;
                 case 1:{
@@ -234,6 +241,13 @@
                     [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
                     [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
                     [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                  
+                    UIImageView *imageView=[[UIImageView alloc]initForAutoLayout];
+                    imageView.image=[UIImage imageNamed:@"callPhone"];
+                    [cell.contentView addSubview:imageView];
+                    [imageView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:20];
+                    [imageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+                    [imageView autoSetDimensionsToSize:CGSizeMake(20, 20)];
                     
                 }
                     break;
@@ -303,10 +317,11 @@
         if (indexPath.row==0||indexPath.row==1) {
             NSArray *array=[self.telePhone arrayByAddingObjectsFromArray:self.phone];
             UIAlertController *firVC=[[UIAlertController alloc]init];
+             __weak typeof (self)weakSelf=self;
             for (NSString *string in array) {
                 if (string.length>0) {
                     UIAlertAction *action=[UIAlertAction actionWithTitle:string style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                        [SwpTools swpToolCallPhone:string superView:self.view];
+                        [SwpTools swpToolCallPhone:string superView:weakSelf.view];
                     }];
                     [firVC addAction:action];
 

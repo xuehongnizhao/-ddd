@@ -147,7 +147,8 @@
 
 - (void)selfInfoAction{
     SelfInfoViewController *firVC=[[SelfInfoViewController alloc]init];
-    [self.navigationController pushViewController:firVC animated:NO];
+    firVC.title=@"个人信息";
+    [self.navigationController pushViewController:firVC animated:YES];
 }
 
 - (UIButton *)changePassword{

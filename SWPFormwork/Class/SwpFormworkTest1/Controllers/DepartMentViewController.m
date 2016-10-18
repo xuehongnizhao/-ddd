@@ -113,10 +113,10 @@
     }
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell1"];
     if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1"];
+        
     }
-
+    
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
     }
@@ -126,34 +126,77 @@
     while ([cell.contentView.subviews lastObject]!= nil) {
         [[cell.contentView.subviews lastObject]removeFromSuperview];
     }
-    
-    UIView *view=[[UIView alloc]initWithFrame:cell.contentView.bounds];
-    [cell.contentView addSubview:view];
     PeopleInfo *peopleInfo=_rightDataList[indexPath.row];
     
-    UILabel *name=[[UILabel alloc]initWithFrame:CGRectMake(5, 5, 60, 30)];
+    UIImageView *imagv=[[UIImageView alloc]initForAutoLayout];
+    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"http://address.hongdingnet.com/web/%@",peopleInfo.photo]];
+    [imagv sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"team_6"]];
+    [cell.contentView addSubview:imagv];
+    [imagv autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:5];
+    [imagv autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [imagv autoSetDimensionsToSize:CGSizeMake(35, 35)];
+    
+    
+    UILabel *name=[[UILabel alloc]initForAutoLayout];
     name.font=[UIFont systemFontOfSize:18];
     name.textColor=[UIColor orangeColor];
     name.text=peopleInfo.peopleName;
-    [view addSubview:name];
-
- 
+    [cell.contentView addSubview:name];
+    [name autoPinEdgeToSuperviewEdge: ALEdgeTop withInset:5];
+    [name autoSetDimensionsToSize:CGSizeMake(70, 20)];
+    [name autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imagv withOffset:5];
     
-    UILabel *tel=[[UILabel alloc]initWithFrame:CGRectMake(5, 30, cell.contentView.frame.size.width, 15)];
+    UILabel *tel=[[UILabel alloc]initForAutoLayout];
     tel.font=[UIFont systemFontOfSize:15];
     NSArray *array=[peopleInfo.phone componentsSeparatedByString:@","];
     tel.text=array[0];
-    [view addSubview:tel];
-
-
+    [cell.contentView addSubview:tel];
+    [tel autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imagv withOffset:5];
+    [tel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:name];
+    [tel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:5];
+    [tel autoPinEdgeToSuperviewEdge:ALEdgeRight];
     
-    UILabel *position=[[UILabel alloc]initWithFrame:CGRectMake(70, 10, cell.contentView.frame.size.width, 14)];
+    UILabel *position=[[UILabel alloc]initForAutoLayout];
     position.font=[UIFont systemFontOfSize:14];
     position.text=peopleInfo.position;
-    [view addSubview:position];
-
-
+    [cell.contentView addSubview:position];
+    [position autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:5];
+    [position autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:name withOffset:5];
+    [position autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:tel];
+    [position autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    
+    UIButton *callImage=[[UIButton alloc]initForAutoLayout];
+    [callImage addTarget:self action:@selector(callPhone:) forControlEvents:UIControlEventTouchUpInside];
+    [callImage setImage:[UIImage imageNamed:@"callPhone"] forState:UIControlStateNormal];
+    callImage.tag=indexPath.row;
+    [cell.contentView addSubview:callImage];
+    [callImage autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [callImage autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [callImage autoSetDimensionsToSize:CGSizeMake(30, 30)];
     return cell;
+}
+
+- (void)callPhone:(UIButton *)sender{
+    PeopleInfo *info=[_rightDataList objectAtIndex:sender.tag];
+    NSArray *telePhone=[info.telephone componentsSeparatedByString:@","];
+    NSArray *phone=[info.phone componentsSeparatedByString:@","];
+    NSArray *array=[telePhone arrayByAddingObjectsFromArray:phone];
+    UIAlertController *firVC=[[UIAlertController alloc]init];
+    __weak typeof (self)weakSelf=self;
+    for (NSString *string in array) {
+        if (string.length>0) {
+            UIAlertAction *action=[UIAlertAction actionWithTitle:string style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [SwpTools swpToolCallPhone:string superView:weakSelf.view];
+            }];
+            [firVC addAction:action];
+            
+        }
+    }
+    UIAlertAction *actionCancell=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [firVC dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [firVC addAction:actionCancell];
+    [self.navigationController presentViewController:firVC animated:YES completion:nil];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (tableView==_tableViewLeft) {

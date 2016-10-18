@@ -10,7 +10,7 @@
 #import "PeopleInfo.h"
 #import "XMNPhotoPickerFramework.h"
 #import "VPImageCropperViewController.h"
-@interface SelfInfoViewController ()<UINavigationControllerDelegate,VPImageCropperDelegate>
+@interface SelfInfoViewController ()<UINavigationControllerDelegate,VPImageCropperDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic)PeopleInfo     *peopleInfo;
 @property (strong, nonatomic)UIImageView    *faceImage;
 @property (strong, nonatomic)UITapGestureRecognizer *ges;
@@ -43,30 +43,226 @@
         UIImage *image=[UIImage imageWithData:data];
         _faceImage.image =image;
     }
-    [_faceImage autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:30];
+    [_faceImage autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
     [_faceImage autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [_faceImage autoSetDimensionsToSize:CGSizeMake(110*BalanceWidth, 110*BalanceWidth)];
-    [self creatLabel:self.peopleInfo.peopleName withIndex:0];
-    [self creatLabel:self.peopleInfo.position withIndex:1];
-    [self creatLabel:self.peopleInfo.teamName withIndex:2];
-    [self creatLabel:self.peopleInfo.groupName withIndex:3];
-    [self creatLabel:self.peopleInfo.phone withIndex:4];
-}
-- (void)creatLabel:(NSString *)message withIndex:(NSInteger)index{
-    UILabel *label=[[UILabel alloc]initForAutoLayout];
-    label.text=message;
-    label.textColor=[UIColor darkGrayColor];
-    label.font=[UIFont systemFontOfSize:16];
-    label.textAlignment=NSTextAlignmentCenter;
-    label.backgroundColor=[UIColor swpColorFromHEX:0xff5927];
-    label.layer.cornerRadius=5;
-    label.clipsToBounds=YES;
-    [self.view addSubview:label];
-    [label autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:40];
-    [label autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:40];
-    [label autoSetDimension:ALDimensionHeight toSize:30];
-    [label autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.faceImage withOffset:30+50*index+8*index];
+    UITableView *tableView=[[UITableView alloc]initForAutoLayout];
     
+    tableView.delegate=self;
+    tableView.dataSource=self;
+    [self.view addSubview:tableView];
+    [tableView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_faceImage withOffset:10];
+    [tableView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [tableView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [tableView setScrollEnabled:NO];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+    view.backgroundColor = [UIColor clearColor];
+    [tableView setTableFooterView:view];
+}
+
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    switch (section) {
+        case 0:
+            return 3;
+            break;
+            
+        default:
+            return 2;
+            break;
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 10;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    switch (indexPath.section) {
+        case 0:{
+            switch (indexPath.row) {
+                case 0:{
+                    UILabel *labelleft=[[UILabel alloc]initForAutoLayout];
+                    labelleft.text=@"处        室:";
+                    [cell.contentView addSubview:labelleft];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeTop ];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [labelleft autoSetDimension:ALDimensionWidth toSize:100];
+                    
+                    UILabel *laberRight=[[UILabel alloc]initForAutoLayout];
+                    laberRight.text=self.peopleInfo.departments;
+                    [cell.contentView addSubview:laberRight];
+                    laberRight.textColor=[UIColor grayColor];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                    
+                }
+                    break;
+                case 1:{
+                    UILabel *labelleft=[[UILabel alloc]initForAutoLayout];
+                    labelleft.text=@"部        门:";
+                    [cell.contentView addSubview:labelleft];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeTop ];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [labelleft autoSetDimension:ALDimensionWidth toSize:100];
+                    
+                    UILabel *laberRight=[[UILabel alloc]initForAutoLayout];
+                    laberRight.text=self.peopleInfo.groupName;
+                    laberRight.textColor=[UIColor grayColor];
+                    [cell.contentView addSubview:laberRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                    
+                }
+                    break;
+                case 2:{
+                    UILabel *labelleft=[[UILabel alloc]initForAutoLayout];
+                    labelleft.text=@"单        位:";
+                    [cell.contentView addSubview:labelleft];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeTop ];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [labelleft autoSetDimension:ALDimensionWidth toSize:100];
+                    
+                    UILabel *laberRight=[[UILabel alloc]initForAutoLayout];
+                    laberRight.text=self.peopleInfo.teamName;
+                    [cell.contentView addSubview:laberRight];
+                    laberRight.textColor=[UIColor grayColor];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                    
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+            break;
+        case 1:{
+            switch (indexPath.row) {
+                case 0:{
+                    UILabel *labelleft=[[UILabel alloc]initForAutoLayout];
+                    labelleft.text=@"移动电话:";
+                    [cell.contentView addSubview:labelleft];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeTop ];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [labelleft autoSetDimension:ALDimensionWidth toSize:100];
+                    
+                    UILabel *laberRight=[[UILabel alloc]initForAutoLayout];
+                    laberRight.text=self.peopleInfo.userName;
+                    [cell.contentView addSubview:laberRight];
+                    laberRight.textColor=[UIColor grayColor];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                
+                    
+                }
+                    break;
+                case 1:{
+                    UILabel *labelleft=[[UILabel alloc]initForAutoLayout];
+                    labelleft.text=@"固定电话:";
+                    [cell.contentView addSubview:labelleft];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeTop ];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [labelleft autoSetDimension:ALDimensionWidth toSize:100];
+                    
+                    UILabel *laberRight=[[UILabel alloc]initForAutoLayout];
+                    NSArray *arr=[self.peopleInfo.telephone componentsSeparatedByString:@","];
+                    if (arr.count>0) {
+                        laberRight.text=arr[0];
+                    }
+                    [cell.contentView addSubview:laberRight];
+                    laberRight.textColor=[UIColor grayColor];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+            
+        case 2:{
+            switch (indexPath.row) {
+                case 0:{
+                    UILabel *labelleft=[[UILabel alloc]initForAutoLayout];
+                    labelleft.text=@"通信地址:";
+                    [cell.contentView addSubview:labelleft];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeTop ];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [labelleft autoSetDimension:ALDimensionWidth toSize:100];
+                    
+                    UILabel *laberRight=[[UILabel alloc]initForAutoLayout];
+                    laberRight.text=self.peopleInfo.address;
+                    [cell.contentView addSubview:laberRight];
+                    laberRight.textColor=[UIColor grayColor];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                    
+                }
+                    break;
+                case 1:{
+                    UILabel *labelleft=[[UILabel alloc]initForAutoLayout];
+                    labelleft.text=@"集团邮箱:";
+                    [cell.contentView addSubview:labelleft];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeTop ];
+                    [labelleft autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [labelleft autoSetDimension:ALDimensionWidth toSize:100];
+                    
+                    UILabel *laberRight=[[UILabel alloc]initForAutoLayout];
+                    laberRight.text=self.peopleInfo.email;
+                    [cell.contentView addSubview:laberRight];
+                    laberRight.textColor=[UIColor grayColor];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeRight];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeTop];
+                    [laberRight autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+                    [laberRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:labelleft withOffset:20];
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+    return cell;
 }
 
 #pragma mark ---VPImageCropperDelegate
