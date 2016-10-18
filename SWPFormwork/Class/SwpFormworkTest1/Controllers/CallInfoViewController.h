@@ -7,7 +7,7 @@
 //
 
 #import "SwpBaseViewController.h"
-
+#import "PeopleInfo.h"
 @interface CallInfoViewController : SwpBaseViewController
-
+@property (strong, nonatomic) PeopleInfo *peopleInfo;
 @end

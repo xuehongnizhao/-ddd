@@ -9,11 +9,15 @@
 #import "DepartMentViewController.h"
 #import "TeamInfo.h"
 #import "PeopleInfo.h"
-@interface DepartMentViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "CallInfoViewController.h"
+@interface DepartMentViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    NSString *rightTitle;
+}
 @property (strong, nonatomic) UITableView *tableViewLeft;
 @property (strong, nonatomic) UITableView *tableViewRight;
 @property (strong, nonatomic) NSMutableArray *leftDataList;
 @property (strong, nonatomic) NSMutableArray *rightDataList;
+
 
 @end
 
@@ -39,12 +43,13 @@
     for (PeopleInfo *info in _dataList.appPeopleDatas) {
         [noOrder addObject:info.departments];
     }
-    
+
     for (NSString *str in noOrder) {
         if (![self.leftDataList containsObject:str]) {
             [self.leftDataList addObject:str];
         }
     }
+    rightTitle=_leftDataList[0];
     _rightDataList=[NSMutableArray array];
     PeopleInfo *firstInf=_dataList.appPeopleDatas[0];
     
@@ -65,7 +70,7 @@
     [_tableViewLeft autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH*5/12];
     
     [self.view addSubview:self.tableViewRight];
-    [_tableViewRight autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH*6/12];
+    [_tableViewRight autoSetDimension:ALDimensionWidth toSize:SCREEN_WIDTH*6.7/12];
     [_tableViewRight autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:5];
     [_tableViewRight autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:5];
     [_tableViewRight autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:5];
@@ -156,24 +161,34 @@
         view.backgroundColor=[UIColor redColor];
         UILabel *laber=[[UILabel alloc]initWithFrame:view.bounds];
         laber.text=_dataList.groupName;
+        laber.textAlignment=NSTextAlignmentCenter;
+        laber.textColor=[UIColor whiteColor];
         [view addSubview:laber];
         
         return view;
     }
-    return nil;
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH/3, 40)];
+    view.backgroundColor=[UIColor redColor];
+    UILabel *laber=[[UILabel alloc]initWithFrame:view.bounds];
+    laber.text=rightTitle;
+    laber.textColor=[UIColor whiteColor];
+    [view addSubview:laber];
+    return view;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (tableView == _tableViewRight) {
-        [SwpTools swpToolCallPhone:@"" superView:self.view];
-        
+        CallInfoViewController *firvc=[[CallInfoViewController alloc]init];
+        firvc.peopleInfo=[_rightDataList objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:firvc animated:YES];
         return;
     }
     
     [_rightDataList removeAllObjects];
     
     NSString *string =_leftDataList[indexPath.row];
-    
+    rightTitle=string;
     
     for (PeopleInfo *info in _dataList.appPeopleDatas) {
         if ([info.departments isEqualToString:string]) {
@@ -188,7 +203,7 @@
     if (tableView==_tableViewLeft) {
         return 40;
     }
-    return 0;
+    return 40;
 }
 - (UITableView *)tableViewLeft{
     if (!_tableViewLeft) {
@@ -205,6 +220,7 @@
         _tableViewRight=[[UITableView alloc]initForAutoLayout];
         _tableViewRight.dataSource=self;
         _tableViewRight.delegate=self;
+        _tableViewRight.layer.cornerRadius=5;
     }
     return _tableViewRight;
 }
