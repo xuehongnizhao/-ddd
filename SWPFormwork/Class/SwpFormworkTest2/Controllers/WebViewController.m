@@ -14,19 +14,18 @@
 
 @implementation WebViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [SVProgressHUD showWithStatus:@"正在加载\n请稍后..."];
     self.rdv_tabBarController.tabBarHidden=YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.rdv_tabBarController.tabBarHidden=NO;
+      [SVProgressHUD dismiss];
 }
 
 - (void)setWebID:(NSString *)webID{
@@ -46,9 +45,7 @@
     webView.delegate=self;
     [webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-    [SVProgressHUD showWithStatus:@"正在加载\n请稍后..."];
-}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     [SVProgressHUD dismiss];
 }

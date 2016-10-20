@@ -8,9 +8,8 @@
 
 #import "SelfInfoViewController.h"
 #import "PeopleInfo.h"
-#import "XMNPhotoPickerFramework.h"
 #import "VPImageCropperViewController.h"
-@interface SelfInfoViewController ()<UINavigationControllerDelegate,VPImageCropperDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface SelfInfoViewController ()<UINavigationControllerDelegate,VPImageCropperDelegate,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (strong, nonatomic)PeopleInfo     *peopleInfo;
 @property (strong, nonatomic)UIImageView    *faceImage;
 @property (strong, nonatomic)UITapGestureRecognizer *ges;
@@ -50,6 +49,7 @@
     
     tableView.delegate=self;
     tableView.dataSource=self;
+    tableView.allowsSelection=NO;
     [self.view addSubview:tableView];
     [tableView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_faceImage withOffset:10];
     [tableView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
@@ -319,29 +319,68 @@
 
 - (void)gesAction{
 
-     [XMNPhotoPicker sharePhotoPicker].frame=CGRectMake(0, -64, SCREEN_WIDTH, SCREEN_HEIGHT);
-     [XMNPhotoPicker sharePhotoPicker].maxCount=1;
-     [XMNPhotoPicker sharePhotoPicker].pickingVideoEnable=NO;
-     [[XMNPhotoPicker sharePhotoPicker] setDidFinishPickingPhotosBlock:^(NSArray<UIImage *> *images, NSArray<XMNAssetModel *> *assets) {
-     NSMutableArray *myImages=[NSMutableArray arrayWithArray:images];
-     id image=myImages[0];
-     if (myImages.count<=0||[image isKindOfClass:[XMNAssetModel class]]) {
-         for (XMNAssetModel *model in assets) {
-         UIImage *image=model.originImage;
-         [myImages addObject:image];
-         }
-     }
-     for (UIImage *image in myImages) {
-         _firVC=[[VPImageCropperViewController alloc]initWithImage:image cropFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-100, 200, 200) limitScaleRatio:2];
-         _firVC.delegate=self;
-         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.36 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-             [self presentViewController:_firVC animated:YES completion:nil];
-         });
-     }
+    UIAlertController *firVC=[[UIAlertController alloc]init];
+    
+    __weak typeof (self)weakSelf = self;
+    UIAlertAction *action=[UIAlertAction actionWithTitle:@"打开相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf loadPhoto];
+    }];
+    UIAlertAction *takePhoto=[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf takePhoto];
+    }];
+    UIAlertAction *loadPhoto=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [firVC addAction:action];
+    [firVC addAction:takePhoto];
+    [firVC addAction:loadPhoto];
+    
+    [self presentViewController:firVC animated:YES completion:nil];
      
-     }];
-     //4. 显示XMNPhotoPicker
-     [[XMNPhotoPicker sharePhotoPicker] showPhotoPickerwithController:self animated:YES];
-     
+}
+//开始拍照
+-(void)takePhoto
+{
+    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+        
+        picker.delegate = self;
+        
+        picker.allowsEditing = YES;
+        
+        picker.sourceType = sourceType;
+        
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+    else
+    {
+    }
+    
+}
+
+//打开本地相册
+-(void)loadPhoto
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:^{}];
+
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    
+    UIImage *image= [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    _firVC=[[VPImageCropperViewController alloc]initWithImage:image cropFrame:CGRectMake(SCREEN_WIDTH/2-100, SCREEN_HEIGHT/2-100, 200, 200) limitScaleRatio:2];
+    _firVC.delegate=self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.36 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self presentViewController:_firVC animated:YES completion:nil];
+    });
 }
 @end

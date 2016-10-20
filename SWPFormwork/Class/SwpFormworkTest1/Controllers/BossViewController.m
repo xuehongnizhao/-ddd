@@ -102,7 +102,8 @@
     
     UILabel *leftLabel=[[UILabel alloc]initForAutoLayout];
     leftLabel.text=infoleft.groupName;
-    leftLabel.textColor=[UIColor grayColor];
+    leftLabel.font=[UIFont systemFontOfSize:14];
+    leftLabel.textAlignment=NSTextAlignmentCenter;
     [buttonLeft addSubview:leftLabel];
     [leftLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [leftLabel autoPinEdgeToSuperviewEdge: ALEdgeTop];
@@ -131,7 +132,8 @@
         
         UILabel *rightLabel=[[UILabel alloc]initForAutoLayout];
         rightLabel.text=infoleft.groupName;
-        rightLabel.textColor=[UIColor grayColor];
+        rightLabel.textAlignment=NSTextAlignmentCenter;
+        rightLabel.font=[UIFont systemFontOfSize:14];
         [buttonRitht addSubview:rightLabel];
         [rightLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
         [rightLabel autoPinEdgeToSuperviewEdge: ALEdgeTop];

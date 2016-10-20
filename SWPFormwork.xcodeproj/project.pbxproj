@@ -24,26 +24,6 @@
 		046877D91D94CB6400CC0DB7 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877D11D94CB6400CC0DB7 /* ALView+PureLayout.m */; };
 		046877DA1D94CB6400CC0DB7 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877D31D94CB6400CC0DB7 /* NSArray+PureLayout.m */; };
 		046877DB1D94CB6400CC0DB7 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877D51D94CB6400CC0DB7 /* NSLayoutConstraint+PureLayout.m */; };
-		046878061D95050700CC0DB7 /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877DF1D95050700CC0DB7 /* UIView+Animations.m */; };
-		046878071D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877E11D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.m */; };
-		046878081D95050700CC0DB7 /* XMNPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877E41D95050700CC0DB7 /* XMNPhotoCollectionController.m */; };
-		046878091D95050700CC0DB7 /* XMNPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877E61D95050700CC0DB7 /* XMNPhotoPickerController.m */; };
-		0468780A1D95050700CC0DB7 /* XMNPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877E81D95050700CC0DB7 /* XMNPhotoPreviewController.m */; };
-		0468780B1D95050700CC0DB7 /* XMNVideoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877EA1D95050700CC0DB7 /* XMNVideoPreviewController.m */; };
-		0468780C1D95050700CC0DB7 /* XMNAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877ED1D95050700CC0DB7 /* XMNAlbumModel.m */; };
-		0468780D1D95050700CC0DB7 /* XMNAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877EF1D95050700CC0DB7 /* XMNAssetModel.m */; };
-		0468780E1D95050700CC0DB7 /* PhotoPickerKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046877F01D95050700CC0DB7 /* PhotoPickerKit.xcassets */; };
-		0468780F1D95050700CC0DB7 /* XMNAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877F31D95050700CC0DB7 /* XMNAlbumCell.m */; };
-		046878101D95050700CC0DB7 /* XMNAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046877F41D95050700CC0DB7 /* XMNAlbumCell.xib */; };
-		046878111D95050700CC0DB7 /* XMNAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877F61D95050700CC0DB7 /* XMNAssetCell.m */; };
-		046878121D95050700CC0DB7 /* XMNAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046877F71D95050700CC0DB7 /* XMNAssetCell.xib */; };
-		046878131D95050700CC0DB7 /* XMNBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877F91D95050700CC0DB7 /* XMNBottomBar.m */; };
-		046878141D95050700CC0DB7 /* XMNBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046877FA1D95050700CC0DB7 /* XMNBottomBar.xib */; };
-		046878151D95050700CC0DB7 /* XMNPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877FC1D95050700CC0DB7 /* XMNPhotoPicker.m */; };
-		046878161D95050700CC0DB7 /* XMNPhotoPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046877FD1D95050700CC0DB7 /* XMNPhotoPicker.xib */; };
-		046878171D95050700CC0DB7 /* XMNPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046877FF1D95050700CC0DB7 /* XMNPhotoPreviewCell.m */; };
-		046878181D95050700CC0DB7 /* XMNPhotoStickLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 046878011D95050700CC0DB7 /* XMNPhotoStickLayout.m */; };
-		046878191D95050700CC0DB7 /* XMNPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046878031D95050700CC0DB7 /* XMNPhotoManager.m */; };
 		0468781C1D9518EB00CC0DB7 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0468781B1D9518EB00CC0DB7 /* ChangePasswordViewController.m */; };
 		047C8F921DA9E4B4003835E5 /* NSString+Extensional.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C8F8F1DA9E4B4003835E5 /* NSString+Extensional.m */; };
 		047C8F931DA9E4B4003835E5 /* pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C8F911DA9E4B4003835E5 /* pinyin.m */; };
@@ -124,43 +104,6 @@
 		046877D61D94CB6400CC0DB7 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
 		046877D71D94CB6400CC0DB7 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		046877D81D94CB6400CC0DB7 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
-		046877DE1D95050700CC0DB7 /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
-		046877DF1D95050700CC0DB7 /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
-		046877E01D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XMNPhotoHUD.h"; sourceTree = "<group>"; };
-		046877E11D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XMNPhotoHUD.m"; sourceTree = "<group>"; };
-		046877E31D95050700CC0DB7 /* XMNPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoCollectionController.h; sourceTree = "<group>"; };
-		046877E41D95050700CC0DB7 /* XMNPhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNPhotoCollectionController.m; sourceTree = "<group>"; };
-		046877E51D95050700CC0DB7 /* XMNPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPickerController.h; sourceTree = "<group>"; };
-		046877E61D95050700CC0DB7 /* XMNPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNPhotoPickerController.m; sourceTree = "<group>"; };
-		046877E71D95050700CC0DB7 /* XMNPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPreviewController.h; sourceTree = "<group>"; };
-		046877E81D95050700CC0DB7 /* XMNPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNPhotoPreviewController.m; sourceTree = "<group>"; };
-		046877E91D95050700CC0DB7 /* XMNVideoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNVideoPreviewController.h; sourceTree = "<group>"; };
-		046877EA1D95050700CC0DB7 /* XMNVideoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNVideoPreviewController.m; sourceTree = "<group>"; };
-		046877EC1D95050700CC0DB7 /* XMNAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNAlbumModel.h; sourceTree = "<group>"; };
-		046877ED1D95050700CC0DB7 /* XMNAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNAlbumModel.m; sourceTree = "<group>"; };
-		046877EE1D95050700CC0DB7 /* XMNAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNAssetModel.h; sourceTree = "<group>"; };
-		046877EF1D95050700CC0DB7 /* XMNAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNAssetModel.m; sourceTree = "<group>"; };
-		046877F01D95050700CC0DB7 /* PhotoPickerKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PhotoPickerKit.xcassets; sourceTree = "<group>"; };
-		046877F21D95050700CC0DB7 /* XMNAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNAlbumCell.h; sourceTree = "<group>"; };
-		046877F31D95050700CC0DB7 /* XMNAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNAlbumCell.m; sourceTree = "<group>"; };
-		046877F41D95050700CC0DB7 /* XMNAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMNAlbumCell.xib; sourceTree = "<group>"; };
-		046877F51D95050700CC0DB7 /* XMNAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNAssetCell.h; sourceTree = "<group>"; };
-		046877F61D95050700CC0DB7 /* XMNAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNAssetCell.m; sourceTree = "<group>"; };
-		046877F71D95050700CC0DB7 /* XMNAssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMNAssetCell.xib; sourceTree = "<group>"; };
-		046877F81D95050700CC0DB7 /* XMNBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNBottomBar.h; sourceTree = "<group>"; };
-		046877F91D95050700CC0DB7 /* XMNBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNBottomBar.m; sourceTree = "<group>"; };
-		046877FA1D95050700CC0DB7 /* XMNBottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMNBottomBar.xib; sourceTree = "<group>"; };
-		046877FB1D95050700CC0DB7 /* XMNPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPicker.h; sourceTree = "<group>"; };
-		046877FC1D95050700CC0DB7 /* XMNPhotoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNPhotoPicker.m; sourceTree = "<group>"; };
-		046877FD1D95050700CC0DB7 /* XMNPhotoPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMNPhotoPicker.xib; sourceTree = "<group>"; };
-		046877FE1D95050700CC0DB7 /* XMNPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPreviewCell.h; sourceTree = "<group>"; };
-		046877FF1D95050700CC0DB7 /* XMNPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNPhotoPreviewCell.m; sourceTree = "<group>"; };
-		046878001D95050700CC0DB7 /* XMNPhotoStickLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoStickLayout.h; sourceTree = "<group>"; };
-		046878011D95050700CC0DB7 /* XMNPhotoStickLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNPhotoStickLayout.m; sourceTree = "<group>"; };
-		046878021D95050700CC0DB7 /* XMNPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoManager.h; sourceTree = "<group>"; };
-		046878031D95050700CC0DB7 /* XMNPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNPhotoManager.m; sourceTree = "<group>"; };
-		046878041D95050700CC0DB7 /* XMNPhotoPickerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPickerDefines.h; sourceTree = "<group>"; };
-		046878051D95050700CC0DB7 /* XMNPhotoPickerFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPickerFramework.h; sourceTree = "<group>"; };
 		0468781A1D9518EB00CC0DB7 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/ChangePasswordViewController.h; sourceTree = SOURCE_ROOT; };
 		0468781B1D9518EB00CC0DB7 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = SWPFormwork/Class/SwpFormworkTest3/Controllers/ChangePasswordViewController.m; sourceTree = SOURCE_ROOT; };
 		047C8F8E1DA9E4B4003835E5 /* NSString+Extensional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensional.h"; sourceTree = "<group>"; };
@@ -276,82 +219,6 @@
 			path = PureLayout;
 			sourceTree = "<group>";
 		};
-		046877DC1D95050700CC0DB7 /* XMNPhotoPickerFramework */ = {
-			isa = PBXGroup;
-			children = (
-				046877DD1D95050700CC0DB7 /* Categories */,
-				046877E21D95050700CC0DB7 /* Controllers */,
-				046877EB1D95050700CC0DB7 /* Models */,
-				046877F01D95050700CC0DB7 /* PhotoPickerKit.xcassets */,
-				046877F11D95050700CC0DB7 /* Views */,
-				046878021D95050700CC0DB7 /* XMNPhotoManager.h */,
-				046878031D95050700CC0DB7 /* XMNPhotoManager.m */,
-				046878041D95050700CC0DB7 /* XMNPhotoPickerDefines.h */,
-				046878051D95050700CC0DB7 /* XMNPhotoPickerFramework.h */,
-			);
-			path = XMNPhotoPickerFramework;
-			sourceTree = "<group>";
-		};
-		046877DD1D95050700CC0DB7 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				046877DE1D95050700CC0DB7 /* UIView+Animations.h */,
-				046877DF1D95050700CC0DB7 /* UIView+Animations.m */,
-				046877E01D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.h */,
-				046877E11D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		046877E21D95050700CC0DB7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				046877E31D95050700CC0DB7 /* XMNPhotoCollectionController.h */,
-				046877E41D95050700CC0DB7 /* XMNPhotoCollectionController.m */,
-				046877E51D95050700CC0DB7 /* XMNPhotoPickerController.h */,
-				046877E61D95050700CC0DB7 /* XMNPhotoPickerController.m */,
-				046877E71D95050700CC0DB7 /* XMNPhotoPreviewController.h */,
-				046877E81D95050700CC0DB7 /* XMNPhotoPreviewController.m */,
-				046877E91D95050700CC0DB7 /* XMNVideoPreviewController.h */,
-				046877EA1D95050700CC0DB7 /* XMNVideoPreviewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		046877EB1D95050700CC0DB7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				046877EC1D95050700CC0DB7 /* XMNAlbumModel.h */,
-				046877ED1D95050700CC0DB7 /* XMNAlbumModel.m */,
-				046877EE1D95050700CC0DB7 /* XMNAssetModel.h */,
-				046877EF1D95050700CC0DB7 /* XMNAssetModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		046877F11D95050700CC0DB7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				046877F21D95050700CC0DB7 /* XMNAlbumCell.h */,
-				046877F31D95050700CC0DB7 /* XMNAlbumCell.m */,
-				046877F41D95050700CC0DB7 /* XMNAlbumCell.xib */,
-				046877F51D95050700CC0DB7 /* XMNAssetCell.h */,
-				046877F61D95050700CC0DB7 /* XMNAssetCell.m */,
-				046877F71D95050700CC0DB7 /* XMNAssetCell.xib */,
-				046877F81D95050700CC0DB7 /* XMNBottomBar.h */,
-				046877F91D95050700CC0DB7 /* XMNBottomBar.m */,
-				046877FA1D95050700CC0DB7 /* XMNBottomBar.xib */,
-				046877FB1D95050700CC0DB7 /* XMNPhotoPicker.h */,
-				046877FC1D95050700CC0DB7 /* XMNPhotoPicker.m */,
-				046877FD1D95050700CC0DB7 /* XMNPhotoPicker.xib */,
-				046877FE1D95050700CC0DB7 /* XMNPhotoPreviewCell.h */,
-				046877FF1D95050700CC0DB7 /* XMNPhotoPreviewCell.m */,
-				046878001D95050700CC0DB7 /* XMNPhotoStickLayout.h */,
-				046878011D95050700CC0DB7 /* XMNPhotoStickLayout.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		047C8F8D1DA9E4B4003835E5 /* ChineseToPinYin */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,7 +287,6 @@
 			children = (
 				047C8F8D1DA9E4B4003835E5 /* ChineseToPinYin */,
 				0424C7511D9A145800940283 /* VPImageCropper */,
-				046877DC1D95050700CC0DB7 /* XMNPhotoPickerFramework */,
 				2D88ED981CE9646500E7E91C /* SwpTools */,
 			);
 			path = Librarys;
@@ -961,13 +827,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D88ED821CE9609D00E7E91C /* Assets.xcassets in Resources */,
-				0468780E1D95050700CC0DB7 /* PhotoPickerKit.xcassets in Resources */,
 				2D88ED851CE9609D00E7E91C /* LaunchScreen.storyboard in Resources */,
-				046878101D95050700CC0DB7 /* XMNAlbumCell.xib in Resources */,
 				2D88EDE61CE9646500E7E91C /* gps.db in Resources */,
-				046878121D95050700CC0DB7 /* XMNAssetCell.xib in Resources */,
-				046878161D95050700CC0DB7 /* XMNPhotoPicker.xib in Resources */,
-				046878141D95050700CC0DB7 /* XMNBottomBar.xib in Resources */,
 				2D88EDF41CE9646500E7E91C /* SwpShareShowCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1035,16 +896,12 @@
 				046877C31D94AFE800CC0DB7 /* AddressListViewController.m in Sources */,
 				2D88EE461CE96A6800E7E91C /* SwpNavigationController.m in Sources */,
 				2D88EE451CE96A6800E7E91C /* SwpBaseViewController.m in Sources */,
-				046878151D95050700CC0DB7 /* XMNPhotoPicker.m in Sources */,
 				042042851D9BB304003528EA /* MessageInfo.m in Sources */,
 				0424C7601D9A443000940283 /* TeamInfo.m in Sources */,
 				2D88ED801CE9609D00E7E91C /* AppDelegate.m in Sources */,
 				042042881D9C9E04003528EA /* WebViewController.m in Sources */,
 				2D88EDE11CE9646500E7E91C /* UIView+SwpExtension.m in Sources */,
-				046878071D95050700CC0DB7 /* UIViewController+XMNPhotoHUD.m in Sources */,
 				2D88EDED1CE9646500E7E91C /* SwpSystemPinView.m in Sources */,
-				046878191D95050700CC0DB7 /* XMNPhotoManager.m in Sources */,
-				0468780B1D95050700CC0DB7 /* XMNVideoPreviewController.m in Sources */,
 				2D88ED7D1CE9609D00E7E91C /* main.m in Sources */,
 				2D88EDEE1CE9646500E7E91C /* SwpSelectPhotographCell.m in Sources */,
 				2D88EDEB1CE9646500E7E91C /* SwpMapView.m in Sources */,
@@ -1053,21 +910,15 @@
 				2D88EDE51CE9646500E7E91C /* CSqlite.m in Sources */,
 				046877DA1D94CB6400CC0DB7 /* NSArray+PureLayout.m in Sources */,
 				2D88EDE81CE9646500E7E91C /* SwpLocation.m in Sources */,
-				046878111D95050700CC0DB7 /* XMNAssetCell.m in Sources */,
-				0468780D1D95050700CC0DB7 /* XMNAssetModel.m in Sources */,
-				046878131D95050700CC0DB7 /* XMNBottomBar.m in Sources */,
 				2D88EDE01CE9646500E7E91C /* UINavigationBar+BackgroundColor.m in Sources */,
 				2D88EDEA1CE9646500E7E91C /* SwpAnnotation.m in Sources */,
 				0424C75D1D9A436D00940283 /* DepartmentInfo.m in Sources */,
 				2D88EDF51CE9646500E7E91C /* SwpShareShowView.m in Sources */,
-				046878181D95050700CC0DB7 /* XMNPhotoStickLayout.m in Sources */,
 				2D88EDEC1CE9646500E7E91C /* SwpPingView.m in Sources */,
 				2D88EDF11CE9646500E7E91C /* SwpShareModel.m in Sources */,
 				0420427F1D9B9373003528EA /* BossViewController.m in Sources */,
 				2D88EDF21CE9646500E7E91C /* SwpShareTools.m in Sources */,
 				046877C61D94B00700CC0DB7 /* MessageViewController.m in Sources */,
-				046878091D95050700CC0DB7 /* XMNPhotoPickerController.m in Sources */,
-				046878061D95050700CC0DB7 /* UIView+Animations.m in Sources */,
 				0424C7541D9A145800940283 /* VPImageCropperViewController.m in Sources */,
 				2D88EE4D1CE9741300E7E91C /* SwpUtils.m in Sources */,
 				04E132D21DA88F700048F6D6 /* SearchViewController.m in Sources */,
@@ -1076,20 +927,15 @@
 				0468781C1D9518EB00CC0DB7 /* ChangePasswordViewController.m in Sources */,
 				0420428B1D9CB631003528EA /* DepartMentViewController.m in Sources */,
 				2D88EDE91CE9646500E7E91C /* SwpLocationModel.m in Sources */,
-				046878081D95050700CC0DB7 /* XMNPhotoCollectionController.m in Sources */,
-				0468780F1D95050700CC0DB7 /* XMNAlbumCell.m in Sources */,
 				2D88EE471CE96A6800E7E91C /* SwpTabBarController.m in Sources */,
 				046877C91D94B00F00CC0DB7 /* MineViewController.m in Sources */,
 				2D88EDF01CE9646500E7E91C /* SwpShareView.m in Sources */,
 				2D88EDF31CE9646500E7E91C /* SwpShareShowCell.m in Sources */,
 				2D88EDE21CE9646500E7E91C /* SwpGuidePage.m in Sources */,
 				046877DB1D94CB6400CC0DB7 /* NSLayoutConstraint+PureLayout.m in Sources */,
-				0468780A1D95050700CC0DB7 /* XMNPhotoPreviewController.m in Sources */,
 				045BC12D1DB0A60B000294B3 /* CallInfoViewController.m in Sources */,
 				047C8F931DA9E4B4003835E5 /* pinyin.m in Sources */,
 				2D88EDE41CE9646500E7E91C /* SwpGuideCell.m in Sources */,
-				0468780C1D95050700CC0DB7 /* XMNAlbumModel.m in Sources */,
-				046878171D95050700CC0DB7 /* XMNPhotoPreviewCell.m in Sources */,
 				0424C6A81D98EBE700940283 /* PeopleInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
