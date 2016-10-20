@@ -12,13 +12,14 @@
 #import "ChangePasswordViewController.h"
 #import "SelfInfoViewController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-@interface MineViewController ()
+@interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic)UIImageView    *headImage;
 @property (strong, nonatomic)UILabel        *nameLabel;
-@property (strong, nonatomic)UIButton       *selfInfo;
-@property (strong, nonatomic)UIButton       *changePassword;
-@property (strong, nonatomic)UIButton       *erWeiMa;
-@property (strong, nonatomic)UIButton       *verionInfo;
+@property (strong, nonatomic)UITableView    *tableView;
+//@property (strong, nonatomic)UIButton       *selfInfo;
+//@property (strong, nonatomic)UIButton       *changePassword;
+//@property (strong, nonatomic)UIButton       *erWeiMa;
+//@property (strong, nonatomic)UIButton       *verionInfo;
 @property (strong, nonatomic)UIButton       *quitLogin;
 @property (strong, nonatomic)PeopleInfo     *myInfo;
 @end
@@ -83,37 +84,86 @@
     [_nameLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.headImage];
     [_nameLabel autoSetDimension:ALDimensionHeight toSize:30];
     
-    [self.view addSubview:self.selfInfo];
-    [_selfInfo autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:backGroundView withOffset:30];
-    [_selfInfo autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-    [_selfInfo autoPinEdgeToSuperviewEdge:ALEdgeRight];
-    [_selfInfo autoSetDimension:ALDimensionHeight toSize:40];
-    
-    [self.view addSubview:self.changePassword];
-    [_changePassword autoSetDimension:ALDimensionHeight toSize:40];
-    [_changePassword autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-    [_changePassword autoPinEdgeToSuperviewEdge:ALEdgeRight];
-    [_changePassword autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.selfInfo];
-    
-    [self.view addSubview:self.erWeiMa];
-    [_erWeiMa autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.changePassword];
-    [_erWeiMa autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-    [_erWeiMa autoPinEdgeToSuperviewEdge:ALEdgeRight];
-    [_erWeiMa autoSetDimension:ALDimensionHeight toSize:40];
-    
-    [self.view addSubview:self.verionInfo];
-    [_verionInfo autoSetDimension:ALDimensionHeight toSize:40];
-    [_verionInfo autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-    [_verionInfo autoPinEdgeToSuperviewEdge:ALEdgeRight];
-    [_verionInfo autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.erWeiMa];
-    
+    [self.view addSubview:self.tableView];
+    [_tableView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:backGroundView withOffset:20];
+    [_tableView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [_tableView autoPinEdgeToSuperviewEdge: ALEdgeRight];
+    [_tableView autoSetDimension:ALDimensionHeight toSize:160];
     [self.view addSubview:self.quitLogin];
-    [_quitLogin autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.verionInfo withOffset:50*BalanceHeight];
+    [_quitLogin autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.tableView withOffset:50*BalanceHeight];
     [_quitLogin autoSetDimension:ALDimensionHeight toSize:40];
     [_quitLogin autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:40];
     [_quitLogin autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:40];
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell=[[UITableViewCell alloc]init];
+
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    
+    switch (indexPath.row) {
+        case 0:{
+            cell.imageView.image=[UIImage imageNamed:@"selfInfo"];
+            cell.textLabel.text=@"个人信息";
+        }
+            
+            break;
+        case 1:{
+            cell.imageView.image=[UIImage imageNamed:@"changePassword"];
+            cell.textLabel.text=@"修改密码";
+        }
+            
+            break;
+        case 2:{
+            cell.imageView.image=[UIImage imageNamed:@"erWeiMa"];
+            cell.textLabel.text=@"二 维 码";
+        }
+            
+            break;
+        case 3:{
+            cell.imageView.image=[UIImage imageNamed:@"versionInfo"];
+            cell.textLabel.text=@"版本信息";
+        }
+            
+            break;
+        default:
+            break;
+    }
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 4;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:{
+            [self selfInfoAction];
+        }
+            break;
+        case 1:{
+            [self changePasswordAction];
+        }
+            break;
+        case 2:{
+            [self erWeiMaAction];
+        }
+            break;
+        case 3:{
+            [self verionInfoAction];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 - (UIImageView *)headImage{
     if (!_headImage) {
         _headImage=[[UIImageView alloc]initForAutoLayout];
@@ -134,16 +184,17 @@
     return _nameLabel;
 }
 
-- (UIButton *)selfInfo{
-    if (!_selfInfo) {
-        _selfInfo=[[UIButton alloc]initForAutoLayout];
-        [_selfInfo addTarget:self action:@selector(selfInfoAction) forControlEvents:UIControlEventTouchUpInside];
-        [_selfInfo setTitle:@" 个人信息" forState:UIControlStateNormal];
-        [_selfInfo setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_selfInfo setImage:[UIImage imageNamed:@"selfInfo"] forState:UIControlStateNormal];
+- (UITableView *)tableView{
+    if (!_tableView) {
+        _tableView=[[UITableView alloc]initForAutoLayout];
+        _tableView.delegate=self;
+        _tableView.dataSource=self;
+        _tableView.scrollEnabled=NO;
+        
     }
-    return _selfInfo;
+    return _tableView;
 }
+
 
 - (void)selfInfoAction{
     SelfInfoViewController *firVC=[[SelfInfoViewController alloc]init];
@@ -151,18 +202,7 @@
     [self.navigationController pushViewController:firVC animated:YES];
 }
 
-- (UIButton *)changePassword{
-    if (!_changePassword) {
-        _changePassword=[[UIButton alloc]initForAutoLayout];
-        [_changePassword addTarget:self action:@selector(changePasswordAction) forControlEvents:UIControlEventTouchUpInside];
-        _changePassword.layer.borderWidth=1;
-        _changePassword.layer.borderColor=[UIColor colorWithWhite:.8 alpha:1].CGColor;
-        [_changePassword setTitle:@" 修改密码" forState:UIControlStateNormal];
-        [_changePassword setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_changePassword setImage:[UIImage imageNamed:@"changePassword"] forState:UIControlStateNormal];
-    }
-    return _changePassword;
-}
+
 
 - (void)changePasswordAction{
     [self presentViewController:[[ChangePasswordViewController alloc]init] animated:NO completion:nil];
@@ -170,16 +210,7 @@
     
 }
 
-- (UIButton *)erWeiMa{
-    if (!_erWeiMa) {
-        _erWeiMa=[[UIButton alloc]initForAutoLayout];
-        [_erWeiMa addTarget:self action:@selector(erWeiMaAction) forControlEvents:UIControlEventTouchUpInside];
-        [_erWeiMa setTitle:@"   二维码  " forState:UIControlStateNormal];
-        [_erWeiMa setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_erWeiMa setImage:[UIImage imageNamed:@"erWeiMa"] forState:UIControlStateNormal];
-    }
-    return _erWeiMa;
-}
+
 
 - (void)erWeiMaAction{
     UIViewController *firVC=[[UIViewController alloc]init];
@@ -192,18 +223,6 @@
     
 }
 
-- (UIButton *)verionInfo{
-    if (!_verionInfo) {
-        _verionInfo=[[UIButton alloc]initForAutoLayout];
-        [_verionInfo addTarget:self action:@selector(verionInfoAction) forControlEvents:UIControlEventTouchUpInside];
-        _verionInfo.layer.borderWidth=1;
-        _verionInfo.layer.borderColor=[UIColor colorWithWhite:.8 alpha:1].CGColor;
-        [_verionInfo setTitle:@" 版本信息" forState:UIControlStateNormal];
-        [_verionInfo setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_verionInfo setImage:[UIImage imageNamed:@"versionInfo"] forState:UIControlStateNormal];
-    }
-    return _verionInfo;
-}
 
 
 - (void)verionInfoAction{
